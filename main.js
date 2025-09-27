@@ -128,7 +128,6 @@ const modalCloseBtn = document.getElementById('modalClose')
 
 modalOpenBtn.addEventListener('click', () => {
     heroModal.classList.add("hero-modal--show")
-    // heroModalWrapper.classList.add("hero-modal--show")
     document.body.style.overflow = "hidden"; // scrollni o‘chiradi
 })
 
