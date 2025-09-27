@@ -1,0 +1,311 @@
+@use "../../base/mixins" as *;
+@use "../../base/variables" as *;
+
+.hero-drawer {
+  overflow-x: hidden;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-content: end;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  &__wrapper {
+    width: 456px;
+    height: 100vh;
+    padding: 40px;
+    // opacity: 0;
+    background-color: #ffffff;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    @include flexLayout(flex, space-between, space-between, 0, column nowrap);
+
+    @include xl {
+      padding: 30px;
+      width: 400px;
+    }
+    @include lg {
+      padding: 25px;
+      width: 360px;
+    }
+    @include md {
+      padding: 20px;
+      width: 320px;
+    }
+    @include sm {
+      padding: 15px;
+      width: 280px;
+    }
+  }
+
+  &__top {
+    &-header {
+      @include flexLayout(flex, space-between, center, 0, row nowrap);
+    }
+  }
+  &__title {
+    font-family: Poppins;
+    letter-spacing: 0%;
+    @include headingFonts($text-color, 20px, 500, 150%, capitalize);
+
+    @include xl {
+      font-size: 18px;
+    }
+    @include lg {
+      font-size: 16px;
+    }
+    @include md {
+      font-size: 14px;
+    }
+    @include sm {
+      font-size: 12px;
+    }
+  }
+  &__close {
+    width: 45px;
+    height: 45px;
+    @include flexLayout(flex, center, center, 0, row nowrap);
+
+    @include lg {
+      width: 40px;
+      height: 40px;
+    }
+    @include md {
+      width: 35px;
+      height: 35px;
+    }
+    @include sm {
+      width: 30px;
+      height: 30px;
+    }
+
+    i {
+      cursor: pointer;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__item {
+    border-top: 1px solid #e5e5e5;
+    padding: 8px 0;
+    @include flexLayout(flex, space-between, center, 0, row nowrap);
+
+    &:first-child{
+        border: none
+    }
+
+    &-content {
+      @include flexLayout(flex, flex-start, center, 8px, row nowrap);
+
+      @include md {
+        gap: 4px;
+      }
+    }
+
+    &-image {
+      width: 120px;
+      height: 100px;
+      object-fit: cover;
+
+      @include xl {
+        width: 80px;
+        height: 70px;
+      }
+      @include lg {
+        width: 70px;
+        height: 60px;
+      }
+      @include md {
+        width: 60px;
+        height: 50px;
+      }
+      @include sm {
+        width: 50px;
+        height: 40px;
+      }
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+    }
+    &-title {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts($text-color, 14px, 400, 150%, capitalize);
+
+      @include lg {
+        font-size: 12px;
+      }
+      @include md {
+        font-size: 11px;
+      }
+      @include sm {
+        font-size: 10px;
+      }
+    }
+    &-text {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts($text-color, 14px, 400, 150%, none);
+
+      @include lg {
+        font-size: 12px;
+      }
+      @include md {
+        font-size: 11px;
+      }
+      @include sm {
+        font-size: 10px;
+      }
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    &-remove {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      border-radius: 50px;
+      border: 1px solid #969696;
+      transition: all 150ms ease;
+      @include flexLayout(flex, center, center, 0, row nowrap);
+
+      @include lg {
+        width: 22px;
+        height: 22px;
+      }
+      @include md {
+        width: 20px;
+        height: 20px;
+      }
+      @include sm {
+        width: 18px;
+        height: 18px;
+      }
+
+      &:hover {
+        background-color: #e7e7e7;
+      }
+
+      i {
+        font-size: 10px;
+        color: #666666;
+
+        @include lg {
+          font-size: 9px;
+        }
+        @include md {
+          font-size: 8px;
+        }
+        @include sm {
+          font-size: 7px;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    &-meta {
+      padding: 24px;
+      @include flexLayout(flex, space-between, center, 0, row nowrap);
+    }
+
+    &-count {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts($text-color, 16px, 400, 150%, capitalize);
+
+      @include lg {
+        font-size: 14px;
+      }
+      @include md {
+        font-size: 12px;
+      }
+      @include sm {
+        font-size: 11px;
+      }
+    }
+    &-price {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts($text-color, 16px, 600, 120%, none);
+
+      @include lg {
+        font-size: 14px;
+      }
+      @include md {
+        font-size: 12px;
+      }
+      @include sm {
+        font-size: 11px;
+      }
+    }
+
+    &-btn {
+      font-family: Poppins;
+      width: 100%;
+      cursor: pointer;
+      letter-spacing: 0%;
+      transition: all 150ms ease;
+      @include headingFonts(#ffffff, 16px, 600, 120%, capitalize);
+      @include Button($button-color, 1px solid $button-color, 43px, 16px 40px);
+
+      @include lg {
+        font-size: 14px;
+        padding: 14px 35px;
+      }
+      @include md {
+        font-size: 12px;
+        padding: 11px 30px;
+      }
+      @include sm {
+        font-size: 10px;
+        padding: 8px 25px;
+      }
+
+      &:hover {
+        background-color: #089a0d;
+      }
+
+      &--white {
+        margin-top: 12px;
+        color: $button-color;
+        background-color: #56ac591a;
+        border: 1px solid #56ac591a;
+
+        @include md {
+          margin-top: 10px;
+        }
+        @include sm {
+          margin-top: 8px;
+        }
+
+        &:hover {
+          background-color: #56ac5930;
+        }
+      }
+    }
+  }
+}
+
+.hero-drawer--show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero-drawer--show .hero-drawer__wrapper {
+  transform: translateX(0);
+}

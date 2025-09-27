@@ -1,0 +1,113 @@
+@use './variables' as *;
+
+@mixin flexLayout(
+  $flex,
+  $jc: space-between,
+  $ai: center,
+  $gap: 10px,
+  $flexFlow: row nowrap
+) {
+  gap: $gap;
+  display: $flex;
+  align-items: $ai;
+  flex-flow: $flexFlow;
+  justify-content: $jc;
+}
+
+@mixin gridLayout($grid: grid, $gridTemplateCol: 3, $gap: default) {
+  gap: $gap;
+  display: $grid;
+  @if $gridTemplateCol > 1 {
+    grid-template-columns: repeat($gridTemplateCol, 1fr);
+  } @else {
+    grid-template-columns: 1fr;
+  }
+}
+
+@mixin Input(
+  $color: $input__border-color,
+  $placeholderColor: $input__border-color,
+  $bgColor: default,
+  $border: 1px solid $input__border-color,
+  $borderRadius: 4px
+) {
+  color: $color;
+  outline: none;
+  border: $border;
+  background-color: $bgColor;
+  border-radius: $borderRadius;
+  &::placeholder {
+    color: $placeholderColor;
+  }
+}
+
+@mixin Button(
+  $bgColor: default,
+  $border: 1px solid $input__border-color,
+  $borderRadius: 4px,
+  $padding: 10px,
+  $transition: all 300ms ease
+) {
+  border: $border;
+  padding: $padding;
+  transition: $transition;
+  background-color: $bgColor;
+  border-radius: $borderRadius;
+}
+
+@mixin headingFonts(
+  $color: $input__border-color,
+  $fontSize: 18px,
+  $fontWeight: 400,
+  $lineHeight: default,
+  $textTransform: capitalize
+) {
+  color: $color;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+  text-transform: $textTransform;
+}
+
+@mixin lineClamp($num:1){
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $num;
+  -webkit-box-orient: vertical;  
+}
+
+@mixin sm {
+  @media only screen and (max-width: $sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media only screen and (max-width: $md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media only screen and (max-width: $lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media only screen and (max-width: $xl) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media only screen and (max-width: $xxl) {
+    @content;
+  }
+}
+
+@mixin defaultMediaQuery($query) {
+  @media only screen and (max-width: $query) {
+    @content;
+  }
+}

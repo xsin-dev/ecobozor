@@ -1,0 +1,219 @@
+@use "../../base/mixins" as *;
+@use "../../base/variables" as *;
+
+.footer {
+  background-color: $text-color;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    @include lg {
+      gap: 40px;
+    }
+    @include md {
+      gap: 30px;
+    }
+    @include md {
+      gap: 15px;
+    }
+  }
+
+  &__content {
+    padding: 60px 0;
+    @include flexLayout(flex, space-between, center, 40px, row nowrap);
+
+    @include md {
+      justify-content: center;
+    }
+  }
+
+  &__info {
+    @include flexLayout(flex, flex-start, flex-start, 16px, column nowrap);
+
+    @include md {
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-text {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      width: 336px;
+      @include headingFonts(#808080, 14px, 400, 150%, none);
+
+      @include xl {
+        width: 280px;
+        font-size: 12px;
+      }
+      @include lg {
+        width: 250px;
+        font-size: 12px;
+      }
+      @include md {
+        // width: 200px;
+        // font-size: 10px;
+        text-align: center;
+      }
+      // @include md {
+      //   width: 120px;
+      //   font-size: 10px;
+      // }
+    }
+
+    &-contact {
+      @include flexLayout(flex, space-between, center, 16px, row nowrap);
+
+      &-number {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts(#ffffff, 14px, 500, 150%, none);
+
+        @include lg {
+          font-size: 12px;
+        }
+        @include md {
+          font-size: 10px;
+        }
+        @include sm {
+          font-size: 8px;
+        }
+      }
+
+      &-text {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts(#808080, 16px, 400, 150%, none);
+
+        @include lg {
+          font-size: 14px;
+        }
+        @include md {
+          font-size: 12px;
+        }
+        @include sm {
+          font-size: 10px;
+        }
+      }
+
+      &-email {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts(#ffffff, 14px, 500, 150%, none);
+
+        @include lg {
+          font-size: 12px;
+        }
+        @include md {
+          font-size: 10px;
+        }
+        @include sm {
+          font-size: 8px;
+        }
+      }
+    }
+  }
+
+  &__links {
+    @include flexLayout(flex, space-between, flex-start, 80px, row nowrap);
+
+    @include xl {
+      gap: 60px;
+    }
+    @include lg {
+      gap: 20px;
+    }
+    @include md {
+      display: none;
+    }
+  }
+
+  &__column {
+    text-align: start;
+
+    &-title {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts(#ffffff, 16px, 500, 150%, capitalize);
+
+      @include xl {
+        font-size: 14px;
+      }
+      @include lg {
+        font-size: 12px;
+      }
+      @include md {
+        font-size: 10px;
+      }
+    }
+
+    &-list {
+      margin-top: 20px;
+      @include flexLayout(flex, flex-start, space-between, 12px, column nowrap);
+
+      @include lg {
+        gap: 8px;
+      }
+    }
+
+    &-item {
+      &:hover {
+        .footer__column-link {
+          color: #ffffff;
+        }
+      }
+    }
+
+    &-link {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      transition: color 150ms linear;
+      @include headingFonts($navbar-link, 14px, 400, 150%, none);
+
+      @include xl {
+        font-size: 12px;
+      }
+      @include lg {
+        font-size: 10px;
+      }
+      @include md {
+        font-size: 8px;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 24px 0;
+    border-top: 1px solid #333333;
+    @include flexLayout(flex, space-between, center, 0, row nowrap);
+
+    @include sm {
+      justify-content: center;
+    }
+
+    &-copyright {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts(#808080, 14px, 400, 150%, none);
+    }
+
+    &-payments {
+      @include flexLayout(flex, space-between, center, 5px, row nowrap);
+
+      @include sm {
+        display: none;
+      }
+
+      &-image {
+        height: 32px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid $navbar-link;
+      }
+      &-img {
+        height: auto;
+        // width: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,289 @@
+@use "../../base/mixins" as *;
+@use "../../base/variables" as *;
+
+// **** HERO MODAL ****
+.hero-modal {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: grid;
+  place-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  &__wrapper {
+    width: 872px;
+    height: 400px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 12px 48px 0px #0000001f;
+    transform: translateY(-100vh);
+    transition: transform 0.3s ease;
+    @include flexLayout(flex, space-between, center, 0, row nowrap);
+
+    @include xl {
+      width: 800px;
+      height: 370px;
+    }
+    @include lg {
+      width: 650px;
+      height: 300px;
+    }
+    @include md{
+      width: 400px;
+      height: 500px;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 20px;
+    }
+    @include sm {
+      width: 350px;
+      height: 500px;
+    }
+  }
+
+  &__image {
+    width: 354px;
+    height: 100%;
+    border-radius: 4px;
+    flex-shrink: 0;
+
+    @include xl {
+      width: 300px;
+    }
+    @include lg {
+      width: 220px;
+    }
+    @include md {
+      width: 70%;
+      height: 200px;
+    }
+    @include sm {
+      width: 70%;
+      height: 250px;
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+  &__content {
+    padding: 50px 40px;
+    @include flexLayout(flex, center, center, 12px, column nowrap);
+
+    @include xl {
+      padding: 40px 40px;
+    }
+    @include lg {
+      padding: 20px 30px;
+    }
+    @include md {
+      gap: 8px;
+    }
+    
+    &-title {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      text-align: center;
+      @include headingFonts($text-color, 40px, 600, 120%, none);
+
+      @include xl {
+        font-size: 36px;
+      }
+      @include lg {
+        font-size: 32px;
+      }
+      @include md {
+        font-size: 26px;
+      }
+      @include sm {
+        font-size: 20px;
+      }
+    }
+    &-text {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      text-align: center;
+      @include headingFonts($navbar-link, 16px, 400, 150%, none);
+
+      @include xl {
+        font-size: 14px;
+      }
+      @include lg {
+        font-size: 12px;
+      }
+      @include md {
+        font-size: 10px;
+      }
+      @include sm {
+        padding: 0 20px;
+        font-size: 9px;
+      }
+
+      span {
+        @include headingFonts(#ef8e06, 16px, 600, 120%, none);
+
+        @include xl {
+          font-size: 14px;
+        }
+        @include lg {
+          font-size: 12px;
+        }
+        @include md {
+          font-size: 10px;
+        }
+        @include sm {
+          font-size: 9px;
+        }
+      }
+    }
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    margin-top: 12px;
+    padding-left: 24px;
+    align-items: center;
+    border-radius: 43px;
+    border: 1px solid #e5e5e5;
+
+    &-input {
+      flex: 1; /* qolgan joyni egallasin */
+      min-width: 0; /* flex shrink uchun kerak */
+      font-family: Poppins;
+      outline: none;
+      border: none;
+      letter-spacing: 0%;
+      margin-right: 20px;
+      @include headingFonts($text-color, 14px, 400, 150%, none);
+
+      @include xl {
+        font-size: 12px;
+      }
+      @include md {
+        font-size: 10px;
+      }
+      @include sm {
+        font-size: 8px;
+      }
+
+      &::placeholder {
+        color: $navbar-link;
+      }
+    }
+    &-btn {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      white-space: nowrap;
+      @include headingFonts(#ffffff, 14px, 600, 20px, capitalize);
+      @include Button($button-color, 1px solid $button-color, 43px, 12px 38px);
+
+      @include xl {
+        font-size: 12px;
+        padding: 12px 25px;
+      }
+      @include md {
+        font-size: 10px;
+        padding: 10px 20px;
+      }
+      @include sm {
+        font-size: 8px;
+        padding: 5px 12px;
+      }
+
+      &:hover {
+        background-color: #147517;
+      }
+    }
+  }
+
+  &__dont-show {
+    margin-top: 38px;
+    @include flexLayout(flex, center, center, 6px, row nowrap);
+
+    @include xl{
+      margin-top: 28px;
+    }
+    @include md{
+      margin-top: 18px;
+    }
+    @include sm{
+      margin-top: 10px;
+    }
+
+    &-text {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts(#666666, 14px, 400, 150%, none);
+
+      @include xl {
+        font-size: 13px;
+      }
+      @include lg {
+        font-size: 12px;
+      }
+      @include md {
+        font-size: 11px;
+      }
+      @include sm {
+        font-size: 10px;
+      }
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+    @include flexLayout(flex, center, center, 0, row nowrap);
+
+    @include lg {
+      width: 40px;
+      height: 40px;
+    }
+    @include md {
+      width: 35px;
+      height: 35px;
+    }
+    @include sm {
+      width: 30px;
+      height: 30px;
+    }
+
+    i {
+      cursor: pointer;
+      font-size: 20px;
+
+      @include lg {
+        font-size: 18px;
+      }
+      @include md {
+        font-size: 16px;
+      }
+      @include sm {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.hero-modal--show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero-modal--show .hero-modal__wrapper {
+  transform: translateX(0);
+}

@@ -1,0 +1,412 @@
+@use "../../base/mixins" as *;
+@use "../../base/variables" as *;
+
+.header {
+  &-top {
+    padding: 13px 0;
+    border-bottom: 2px solid rgb(212, 211, 211);
+  }
+
+  &-middle {
+    padding: 24px 0;
+  }
+  &-bottom {
+    background-color: $header-bottom-color;
+  }
+}
+
+.top-bar {
+  @include flexLayout(flex, space-between, center, 0, row nowrap);
+
+  @include md {
+    justify-content: flex-end;
+  }
+
+  &__location {
+    @include flexLayout(flex, space-between, center, 8px, row nowrap);
+
+    @include md {
+      display: none;
+    }
+
+    &-img {
+      width: 15px;
+      height: 18px;
+
+      @include lg {
+        width: 13px;
+        height: 15px;
+      }
+    }
+
+    &-text {
+      @include headingFonts($gray-color, 18px, 400, 130%, none);
+
+      @include xl {
+        font-size: 16px;
+      }
+      @include lg {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__right {
+    @include flexLayout(flex, space-between, center, 0, row nowrap);
+
+    &-selectors {
+      border-right: 1px solid $gray-color;
+      padding-right: 20px;
+    }
+
+    &-selector {
+      border: none;
+      cursor: pointer;
+      @include headingFonts($gray-color, 12px, 400, 130%, capitalize);
+
+      @include md {
+        font-size: 10px;
+      }
+      @include sm {
+        font-size: 8px;
+      }
+
+      option {
+        font-family: Poppins;
+        border: none;
+        text-align: center;
+        letter-spacing: 0%;
+        @include headingFonts($gray-color, 12px, 400, 130%, capitalize);
+
+        @include md {
+          font-size: 10px;
+        }
+        @include sm {
+          font-size: 8px;
+        }
+      }
+    }
+
+    &-register {
+      padding-left: 20px;
+      @include flexLayout(flex, space-between, center, 0, row nowrap);
+
+      &-singIn {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts($gray-color, 12px, 400, 130%, capitalize);
+
+        @include md {
+          font-size: 10px;
+        }
+        @include sm {
+          font-size: 8px;
+        }
+      }
+      &-singUp {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts($gray-color, 12px, 400, 130%, capitalize);
+        @include md {
+          font-size: 10px;
+        }
+        @include sm {
+          font-size: 8px;
+        }
+      }
+      &-slash {
+        padding: 0 4px;
+        @include headingFonts($gray-color, 12px, 400, 130%, capitalize);
+
+        @include md {
+          font-size: 10px;
+        }
+        @include sm {
+          font-size: 8px;
+        }
+      }
+    }
+  }
+}
+
+// HEADER MIDDLE
+.middle__content {
+  @include flexLayout(flex, space-between, center, 0, row nowrap);
+}
+
+.search-bar {
+  position: relative;
+  margin: 0 10px;
+  max-width: 100%;
+  @include flexLayout(flex, space-between, center, 0px, row nowrap);
+
+  @include md {
+    display: none;
+  }
+
+  &__input {
+    font-family: Poppins;
+    letter-spacing: 0%;
+    min-width: 400px;
+    outline: none;
+    padding: 12px 16px 12px 44px;
+    border: 1px solid #e5e5e5;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    @include headingFonts(black, 15px, 400, 21px, none);
+
+    @include xl {
+      width: 350px;
+    }
+    @include lg {
+      padding: 10px 16px 10px 40px;
+      width: 100%;
+      flex: 1;
+      min-width: 0;
+    }
+
+    // Mobile
+    @include sm {
+      width: 100%;
+    }
+  }
+  &__btn {
+    font-family: Poppins;
+    letter-spacing: 0%;
+    background-color: $button-color;
+    border: 1px solid $button-color;
+    padding: 14px 24px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    @include headingFonts(#ffffff, 14px, 600px, 120%, none);
+
+    @include lg {
+      padding: 12px 20px;
+    }
+    @include md {
+      padding: 10px 18px;
+    }
+  }
+  &__image {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-left: 16px;
+
+    @include lg {
+      width: 13px;
+      height: 13px;
+    }
+  }
+}
+
+.shopping-box {
+  @include flexLayout(flex, space-between, center, 0px, row nowrap);
+
+  &__like {
+    width: 50px;
+    height: 50px;
+    padding-right: 16px;
+
+    @include xl {
+      width: 45px;
+      height: 45px;
+    }
+    @include lg {
+      width: 40px;
+      height: 40px;
+    }
+    @include md {
+      width: 35px;
+      height: 35px;
+    }
+    @include sm {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__card {
+    padding-left: 16px;
+    border-left: 1px solid $gray-color;
+    @include flexLayout(flex, space-between, center, 12px, row nowrap);
+  }
+
+  &__cart {
+    cursor: pointer;
+    position: relative;
+
+    &-img {
+      width: 32px;
+      height: 32px;
+
+      @include xl {
+        width: 28px;
+        height: 28px;
+      }
+      @include lg {
+        width: 24px;
+        height: 24px;
+      }
+      @include md {
+        width: 20px;
+        height: 20px;
+      }
+      @include sm {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &-count {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: $button-color;
+      border-radius: 50px;
+      right: -5px;
+      top: -5px;
+      @include flexLayout(flex, center, center, 0, row nowrap);
+
+      @include md {
+        right: -3px;
+        top: -3px;
+      }
+
+      @include xl {
+        width: 18px;
+        height: 18px;
+      }
+      @include lg {
+        width: 16px;
+        height: 16px;
+      }
+      @include md {
+        width: 14px;
+        height: 14px;
+      }
+      @include sm {
+        width: 12px;
+        height: 12px;
+      }
+
+      &-text {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        text-align: center;
+        @include headingFonts(#ffffff, 10px, 500, 10px, none);
+
+        @include lg {
+          font-size: 8px;
+        }
+        @include md {
+          font-size: 6px;
+        }
+        @include sm {
+          font-size: 5px;
+        }
+      }
+    }
+  }
+
+  &__list {
+    &-text {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts($gray-color, 11px, 400, 120%, none);
+
+      @include lg {
+        font-size: 10px;
+      }
+      @include md {
+        font-size: 8px;
+      }
+      @include sm {
+        font-size: 7px;
+      }
+    }
+    &-price {
+      margin-top: 5px;
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts(black, 14px, 500, 120%, none);
+
+      @include lg {
+        font-size: 12px;
+      }
+      @include md {
+        font-size: 10px;
+      }
+      @include sm {
+        font-size: 8px;
+      }
+    }
+  }
+}
+
+// HEADER BOTTOM
+.header-bottom {
+  @include md {
+    display: none;
+  }
+  &__content {
+    padding: 20px 0;
+    @include flexLayout(flex, space-between, center, 0, row nowrap);
+
+    &-phone {
+      @include flexLayout(flex, space-between, center, 8px, row nowrap);
+
+      &-img {
+        width: 20px;
+        height: 20px;
+
+        @include lg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      &-text {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts(#ffffff, 14px, 500, 150%, none);
+
+        @include lg {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+// ==== NAVBAR ====
+.navbar {
+  &__list {
+    @include flexLayout(flex, space-between, center, 32px, row nowrap);
+
+    @include xl {
+      gap: 28px;
+    }
+    @include lg {
+      gap: 24px;
+    }
+  }
+
+  &__link {
+    font-family: Poppins;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0%;
+    background-color: transparent;
+    transition: color 150ms linear;
+    @include headingFonts($navbar-link, 14px, 500, 150%, capitalize);
+
+    @include lg {
+      font-size: 12px;
+    }
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}

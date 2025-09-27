@@ -1,0 +1,93 @@
+@use "../../base/mixins" as *;
+@use "../../base/variables" as *;
+
+.main {
+  &__button {
+    cursor: pointer;
+    @include flexLayout(flex, center, center, 16px, row nowrap);
+
+    @include lg {
+      gap: 14px;
+    }
+    @include md {
+      gap: 12px;
+    }
+    @include sm {
+      gap: 8px;
+    }
+
+    // &:hover {
+    //   .main__button-text {
+    //     color: #018806;
+    //   }
+    // }
+
+    &-text {
+      font-family: Poppins;
+      line-height: 120%;
+      letter-spacing: 0%;
+      transition: color 150ms linear;
+      @include headingFonts($button-color, 16px, 600, 120%, none);
+
+      @include lg {
+        font-size: 14px;
+      }
+      @include md {
+        font-size: 12px;
+      }
+      @include sm {
+        font-size: 10px;
+      }
+    }
+    &-icon {
+      width: 15px;
+      height: 12px;
+
+      @include lg {
+        width: 11px;
+        height: 10px;
+      }
+      @include md {
+        width: 10px;
+        height: 8px;
+      }
+    }
+
+    &--white {
+      cursor: pointer;
+      padding: 16px 40px;
+      border-radius: 50px;
+      background-color: #ffffff;
+
+      @include lg {
+        padding: 14px 30px;
+      }
+      @include md {
+        padding: 12px 20px;
+      }
+      @include sm {
+        padding: 10px 15px;
+      }
+    }
+    &--green {
+      cursor: pointer;
+      padding: 16px 40px;
+      border-radius: 50px;
+      background-color: $button-color;
+
+      @include lg {
+        padding: 14px 30px;
+      }
+      @include md {
+        padding: 12px 20px;
+      }
+      @include sm {
+        padding: 10px 15px;
+      }
+
+      .main__button-text {
+        color: #ffffff;
+      }
+    }
+  }
+}

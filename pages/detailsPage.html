@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Ecobazar</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="top-bar">
+                        <div class="top-bar__location">
+                            <img class="top-bar__location-img" src="../assets/images/svg/location.svg"
+                                alt="location icon">
+                            <p class="top-bar__location-text">Store Location: Lincoln- 344, Illinois, Chicago, USA</p>
+                        </div>
+                        <div class="top-bar__right">
+                            <div class="top-bar__right-selectors">
+                                <!-- <label for="lang">Choose language:</label> -->
+                                <select class="top-bar__right-selector" id="lang" name="lang">
+                                    <option value="en">Eng</option>
+                                    <option value="ru">rus</option>
+                                    <option value="uz">uzb</option>
+                                </select>
+                                <select class="top-bar__right-selector" id="currency" name="currency">
+                                    <option value="usd">Usd</option>
+                                    <option value="som">Som</option>
+                                    <option value="rubl">Rubl</option>
+                                </select>
+                            </div>
+                            <div class="top-bar__right-register">
+                                <a class="top-bar__right-register-singIn" href="#">Sing In</a>
+                                <p class="top-bar__right-register-slash">/</p>
+                                <a class="top-bar__right-register-singUp" href="#">Sing Up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div class="container">
+                <div class="middle__content">
+                    <a href="../index.html">
+                        <div class="logo">
+                            <img class="logo__image" src="../assets/images/svg/logo.svg" alt="logo">
+                            <p class="logo__text">Ecobazar</p>
+                        </div>
+                    </a>
+                    <div class="search-bar">
+                        <img class="search-bar__image" src="../assets/images/svg/search.svg" alt="search icon">
+                        <input class="search-bar__input" type="text" placeholder="Search">
+                        <button class="search-bar__btn">Search</button>
+                    </div>
+                    <div class="shopping-box">
+                        <img class="shopping-box__like" src="../assets/images/svg/like.svg" alt="like icon">
+                        <div class="shopping-box__card">
+                            <div class="shopping-box__cart">
+                                <img class="shopping-box__cart-img" src="../assets/images/svg/korzinka.svg"
+                                    alt="cart icon">
+                                <div class="shopping-box__cart-count">
+                                    <p class="shopping-box__cart-count-text">2</p>
+                                </div>
+                            </div>
+                            <div class="shopping-box__list">
+                                <p class="shopping-box__list-text">Shopping cart:</p>
+                                <p class="shopping-box__list-price">$57.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-bottom__content">
+                    <nav class="navbar">
+                        <ul class="navbar__list">
+                            <li class="navbar__item">
+                                <select class="navbar__link" name="home" id="home">
+                                    <option value="home">Home</option>
+                                </select>
+                            </li>
+                            <li class="navbar__item">
+                                <select class="navbar__link" name="home" id="home">
+                                    <option value="home">shop</option>
+                                </select>
+                            </li>
+                            <li class="navbar__item">
+                                <select class="navbar__link" name="home" id="home">
+                                    <option value="home">pages</option>
+                                </select>
+                            </li>
+                            <li class="navbar__item">
+                                <select class="navbar__link" name="home" id="home">
+                                    <option value="home">blog</option>
+                                </select>
+                            </li>
+                            <li class="navbar__item">
+                                <a class="navbar__link" href="#">About Us</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a class="navbar__link" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header-bottom__content-phone">
+                        <img class="header-bottom__content-phone-img" src="../assets/images/svg/phone.svg"
+                            alt="phone icon">
+                        <a class="header-bottom__content-phone-text" href="tel:+(219) 555-0114">(219) 555-0114</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="breadcrumb">
+            <div class="container">
+                <nav class="breadcrumb__wrapper">
+                    <a href="../index.html" class="breadcrumb__item">
+                        <i class="fa-regular fa-house"></i>
+                    </a>
+                    <span class="breadcrumb__separator">›</span>
+                    <a href="#" class="breadcrumb__item">Category</a>
+                    <span class="breadcrumb__separator">›</span>
+                    <a href="#" class="breadcrumb__item">Vegetables</a>
+                    <span class="breadcrumb__separator">›</span>
+                    <span class="breadcrumb__item breadcrumb__item--active">Chinese cabbage</span>
+                </nav>
+            </div>
+        </div>
+        <section class="details">
+            <div class="container">
+                <div class="details__wrapper">
+                    <div class="details__main">
+                        <div class="details__gallery">
+                            <div class="details__gallery-thumbnails">
+                                <button class="details__gallery-arrow details__gallery-arrow--up"><img
+                                        src="../assets/images/svg/right-arrow.svg" alt=""></button>
+                                <div class="details__gallery-thumbs">
+                                    <div class="details__gallery-thumb details__gallery-thumb--active">
+                                        <img class="details__gallery-thumb-image"
+                                            data-large="../assets/images/png/cabbage-img1.jpg"
+                                            src="../assets/images/png/cabbage-img1.jpg" alt="cabbage image">
+                                    </div>
+                                    <div class="details__gallery-thumb">
+                                        <img class="details__gallery-thumb-image"
+                                            data-large="../assets/images/png/cabbage-img2.jpg"
+                                            src="../assets/images/png/cabbage-img2.jpg" alt="cabbage image">
+                                    </div>
+                                    <div class="details__gallery-thumb">
+                                        <img class="details__gallery-thumb-image"
+                                            data-large="../assets/images/png/cabbage-img3.jpg"
+                                            src="../assets/images/png/cabbage-img3.jpg" alt="cabbage image">
+                                    </div>
+                                    <div class="details__gallery-thumb">
+                                        <img class="details__gallery-thumb-image"
+                                            data-large="../assets/images/png/cabbage-img4.jpg"
+                                            src="../assets/images/png/cabbage-img4.jpg" alt="cabbage image">
+                                    </div>
+                                </div>
+                                <button class="details__gallery-arrow details__gallery-arrow--down"><img
+                                        src="../assets/images/svg/right-arrow.svg" alt=""></button>
+                            </div>
+                            <div class="details__gallery-view">
+                                <img id="detailsGalleryView" class="details__gallery-view-img   "
+                                    src="../assets/images/png/cabbage-img1.jpg" alt="cabbage image">
+                            </div>
+                        </div>
+                        <div class="details__content">
+                            <h2 class="details__title">Chinese Cabbage <sup>In Stock</sup></h2>
+                            <div class="details__reviews">
+                                <img class="details__reviews-image" src="../assets/images/svg/stars.svg"
+                                    alt="star image">
+                                <p class="details__reviews-text"><span>4</span>Reviews</p>
+                                <span class="details__reviews-dot">·</span>
+                                <p class="details__reviews-sku">SKU: <span>2,51,594</span></p>
+                            </div>
+                            <div class="details__price">
+                                <span class="details__price-old">$48.00</span>
+                                <span class="details__price-new">$17.28</span>
+                                <span class="details__price-discount">65% Off</span>
+                            </div>
+                            <div class="details__brand-bar">
+                                <div class="details__brand">
+                                    <p class="details__brand-text">Brand: </p>
+                                    <span class="details__brand-logo">
+                                        <img class="details__brand-image" src="../assets/images/svg/farmary-logo.svg"
+                                            alt="brand logo">
+                                    </span>
+                                </div>
+                                <div class="details__medias">
+                                    <p class="details__meadias-text">Share item:</p>
+                                    <div class="medias">
+                                        <div class="media">
+                                            <a class="media__link" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                        </div>
+                                        <div class="media">
+                                            <a class="media__link" href="#"><i class="fa-brands fa-twitter"></i></a>
+                                        </div>
+                                        <div class="media">
+                                            <a class="media__link" href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                                        </div>
+                                        <div class="media">
+                                            <a class="media__link" href="#"><i class="fa-brands fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="details__description">Class aptent taciti sociosqu ad litora torquent per conubia
+                                nostra, per inceptos himenaeos. Nulla nibh diam, blandit vel consequat nec, ultrices et
+                                ipsum. Nulla varius magna a consequat pulvinar.</p>
+                            <div class="details__actions">
+                                <div class="quantity">
+                                    <button class="quantity-button decrease">-</button>
+                                    <span class="quantity-counter">1</span>
+                                    <button class="quantity-button increase">+</button>
+                                </div>
+                                <button class="add-to-cart__button">
+                                    Add to Cart
+                                    <img class="add-to-cart__button-img" src="../assets/images/svg/white-cart.svg"
+                                        alt="cart img">
+                                </button>
+                                <div class="like-button">
+                                    <img class="like-button__icon" src="../assets/images/svg/like.svg" alt="like icon">
+                                </div>
+                            </div>
+                            <div class="details__meta">
+                                <p class="details__meta-category">Category: <span>Vegetables</span></p>
+                                <div class="details__meta-tags">
+                                    <p class="details__meta-tags-text">Tag:</p>
+                                    <ul class="details__meta-tags-list">
+                                        <li class="details__meta-tags-item">Vegetables</li>
+                                        <li class="details__meta-tags-item">Healthy</li>
+                                        <li class="details__meta-tags-item">Chinese</li>
+                                        <li class="details__meta-tags-item">Cabbage</li>
+                                        <li class="details__meta-tags-item">Green Cabbage</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="details__info">
+                <div class="details__info-tabs">
+                    <h3 data-tab="desc" class="details__info-tab details__info-tab--active">Descriptions</h3>
+                    <h3 data-tab="addInfo" class="details__info-tab">Additional Information</h3>
+                    <h3 data-tab="feedback" class="details__info-tab">Customer Feedback</h3>
+                </div>
+                <div class="container">
+                    <div class="details__info-wrapper details__info-wrapper--active" data-content="desc">
+                        <div class="details__info-content">
+                            <div class="details__info-description">
+                                <p class="details__info-description-text">Sed commodo aliquam dui ac porta. Fusce ipsum
+                                    felis, imperdiet at posuere ac, viverra at mauris. Maecenas tincidunt ligula a sem
+                                    vestibulum pharetra. Maecenas auctor tortor lacus, nec laoreet nisi porttitor vel.
+                                    Etiam
+                                    tincidunt metus vel dui interdum sollicitudin. Mauris sem ante, vestibulum nec orci
+                                    vitae, aliquam mollis lacus. Sed et condimentum arcu, id molestie tellus.<br><br>
+                                    Nulla
+                                    facilisi. Nam scelerisque vitae justo a convallis. Morbi urna ipsum, placerat quis
+                                    commodo quis, egestas elementum leo. Donec convallis mollis enim. Aliquam id mi
+                                    quam.
+                                    Phasellus nec fringilla elit.
+
+                                    Nulla mauris tellus, feugiat quis pharetra sed, gravida ac dui. Sed iaculis, metus
+                                    faucibus elementum tincidunt, turpis mi viverra velit, pellentesque tristique neque
+                                    mi
+                                    eget nulla. Proin luctus elementum neque et pharetra. </p>
+                                <ul class="details__composition-list">
+                                    <li class="details__composition-item">
+                                        <img class="details__composition-check"
+                                            src="../assets/images/svg/check-icon.svg" alt="check icon">
+                                        <p class="details__composition-text">100 g of fresh leaves provides.</p>
+                                    </li>
+                                    <li class="details__composition-item">
+                                        <img class="details__composition-check"
+                                            src="../assets/images/svg/check-icon.svg" alt="check icon">
+                                        <p class="details__composition-text">100 g of fresh leaves provides.</p>
+                                    </li>
+                                    <li class="details__composition-item">
+                                        <img class="details__composition-check"
+                                            src="../assets/images/svg/check-icon.svg" alt="check icon">
+                                        <p class="details__composition-text">100 g of fresh leaves provides.</p>
+                                    </li>
+                                    <li class="details__composition-item">
+                                        <img class="details__composition-check"
+                                            src="../assets/images/svg/check-icon.svg" alt="check icon">
+                                        <p class="details__composition-text">100 g of fresh leaves provides.</p>
+                                    </li>
+                                </ul>
+                                <p class="details__info-description-subtext">Cras et diam maximus, accumsan sapien
+                                    et, sollicitudin velit. Nulla blandit eros non turpis lobortis iaculis at ut
+                                    massa. </p>
+                            </div>
+                            <div class="details__info-right">
+                                <div class="details__media">
+                                    <img src="../assets/images/png/details-media.png" alt="">
+                                </div>
+                                <div class="details__highlights">
+                                    <div class="details__highlights-box">
+                                        <img class="details__highlights-image"
+                                            src="../assets/images/svg/highlights-img1.svg" alt="">
+                                        <div class="details__highlights-texts">
+                                            <h4 class="details__highlights-title">64% Discount</h4>
+                                            <p class="details__highlights-text">Save your 64% money with us</p>
+                                        </div>
+                                    </div>
+                                    <div class="details__highlights-box">
+                                        <img class="details__highlights-image"
+                                            src="../assets/images/svg/highlights-img2.svg" alt="">
+                                        <div class="details__highlights-texts">
+                                            <h4 class="details__highlights-title">100% Organic</h4>
+                                            <p class="details__highlights-text">100% Organic Vegetables</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details__info-wrapper" data-content="addInfo">
+                        <div class="details__info-content">
+                            <div class="details__features">
+                                <p class="details__feature">Weight:<span class="details__feature-info">03</span></p>
+                                <p class="details__feature">Color:<span class="details__feature-info">Green</span>
+                                </p>
+                                <p class="details__feature">Type:<span class="details__feature-info">Organic</span>
+                                </p>
+                                <p class="details__feature">Category:<span
+                                        class="details__feature-info">Vegetables</span>
+                                </p>
+                                <p class="details__feature">Stock Status:<span class="details__feature-info">Available
+                                        (5,413)</span></p>
+                                <p class="details__feature">Tags:<span class="details__feature-info">Vegetables,
+                                        Healthy, Chinese, Cabbage, Green Cabbage</span></p>
+                            </div>
+                            <div class="details__info-right">
+                                <div class="details__media">
+                                    <img src="../assets/images/png/details-media.png" alt="">
+                                </div>
+                                <div class="details__highlights">
+                                    <div class="details__highlights-box">
+                                        <img class="details__highlights-image"
+                                            src="../assets/images/svg/highlights-img1.svg" alt="">
+                                        <div class="details__highlights-texts">
+                                            <h4 class="details__highlights-title">64% Discount</h4>
+                                            <p class="details__highlights-text">Save your 64% money with us</p>
+                                        </div>
+                                    </div>
+                                    <div class="details__highlights-box">
+                                        <img class="details__highlights-image"
+                                            src="../assets/images/svg/highlights-img2.svg" alt="">
+                                        <div class="details__highlights-texts">
+                                            <h4 class="details__highlights-title">100% Organic</h4>
+                                            <p class="details__highlights-text">100% Organic Vegetables</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details__info-wrapper" data-content="feedback">
+                        <div class="details__feedback">
+                            <ul class="details__feedback-list">
+                                <li class="details__feedback-item">
+                                    <div class="details__feedback-top">
+                                        <div class="details__feedback-user">
+                                            <img class="details__feedback-user-image"
+                                                src="../assets/images/png/testimonials-user.jpg" alt="user image">
+                                            <div class="details__feedback-user-info">
+                                                <h4 class="details__feedback-user-name">Kristin Watson</h4>
+                                                <img class="details__feedback-user-rating"
+                                                    src="../assets/images/svg/stars.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <p class="details__feedback-date">2 min ago</p>
+                                    </div>
+                                    <p class="details__feedback-text">Duis at ullamcorper nulla, eu dictum eros.</p>
+                                </li>
+                                <li class="details__feedback-item">
+                                    <div class="details__feedback-top">
+                                        <div class="details__feedback-user">
+                                            <img class="details__feedback-user-image"
+                                                src="../assets/images/png/testimonials-user.jpg" alt="user image">
+                                            <div class="details__feedback-user-info">
+                                                <h4 class="details__feedback-user-name">Kristin Watson</h4>
+                                                <img class="details__feedback-user-rating"
+                                                    src="../assets/images/svg/stars.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <p class="details__feedback-date">2 min ago</p>
+                                    </div>
+                                    <p class="details__feedback-text">Keep the soil evenly moist for the healthiest
+                                        growth. If the sun gets too hot, Chinese cabbage tends to "bolt" or go to seed;
+                                        in long periods of heat, some kind of shade may be helpful. Watch out for
+                                        snails, as they will harm the plants.</p>
+                                </li>
+                                <li class="details__feedback-item">
+                                    <div class="details__feedback-top">
+                                        <div class="details__feedback-user">
+                                            <img class="details__feedback-user-image"
+                                                src="../assets/images/png/testimonials-user.jpg" alt="user image">
+                                            <div class="details__feedback-user-info">
+                                                <h4 class="details__feedback-user-name">Kristin Watson</h4>
+                                                <img class="details__feedback-user-rating"
+                                                    src="../assets/images/svg/stars.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <p class="details__feedback-date">2 min ago</p>
+                                    </div>
+                                    <p class="details__feedback-text"> Vivamus eget euismod magna. Nam sed lacinia nibh,
+                                        et lacinia lacus.</p>
+                                </li>
+                                <li class="details__feedback-item">
+                                    <div class="details__feedback-top">
+                                        <div class="details__feedback-user">
+                                            <img class="details__feedback-user-image"
+                                                src="../assets/images/png/testimonials-user.jpg" alt="user image">
+                                            <div class="details__feedback-user-info">
+                                                <h4 class="details__feedback-user-name">Kristin Watson</h4>
+                                                <img class="details__feedback-user-rating"
+                                                    src="../assets/images/svg/stars.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <p class="details__feedback-date">2 min ago</p>
+                                    </div>
+                                    <p class="details__feedback-text">200+ Canton Pak Choi Bok Choy Chinese Cabbage
+                                        Seeds Heirloom Non-GMO Productive Brassica rapa VAR. chinensis, a.k.a. Canton's
+                                        Choice, Bok Choi, from USA
+                                    </p>
+                                </li>
+                            </ul>
+                            <button class="details__feedback-btn">Load More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RELETED PRODUCTS -->
+        <section class="detail-products">
+            <div class="container">
+                <div class="details-products__wrapper">
+                    <h2 class="details-products__title">Related Products</h2>
+
+                    <div class="details-products__cards">
+                        <div class="products__card details-products__card">
+                            <div class="products__card-image details-products__card-image">
+                                <img class="products__card-img details-products__card-img"
+                                    src="../assets/images/png/cabbage.jpg" alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                        <p class="products__card-old-price">$20.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="../assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="../assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="../assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="../assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                            <div class="products__card-badge">
+                                <p class="products__card-badge-text">Sale </p>
+                                <p class="products__card-badge-percentage">50%</p>
+                            </div>
+                        </div>
+                        <div class="products__card details-products__card">
+                            <div class="products__card-image details-products__card-image">
+                                <img class="products__card-img details-products__card-img"
+                                    src="../assets/images/png/cabbage.jpg" alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="../assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="../assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="../assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="../assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card details-products__card">
+                            <div class="products__card-image details-products__card-image">
+                                <img class="products__card-img details-products__card-img"
+                                    src="../assets/images/png/cabbage.jpg" alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="../assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="../assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="../assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="../assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card details-products__card">
+                            <div class="products__card-image details-products__card-image">
+                                <img class="products__card-img details-products__card-img"
+                                    src="../assets/images/png/cabbage.jpg" alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="../assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="../assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="../assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="../assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter__wrapper">
+                    <div class="newsletter__info">
+                        <h4 class="newsletter__info-title">Subcribe our Newsletter</h4>
+                        <p class="newsletter__info-text">Pellentesque eu nibh eget mauris congue mattis mattis nec
+                            tellus. Phasellus imperdiet elit eu magna.</p>
+                    </div>
+                    <form class="newsletter__form">
+                        <input class="newsletter__form-input" type="email" name="email" placeholder="Your email address"
+                            required>
+                        <button class="newsletter__form-btn" type="submit">Subscribe</button>
+                    </form>
+                    <div class="medias">
+                        <div class="media">
+                            <a class="media__link" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                        <div class="media">
+                            <a class="media__link" href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                        <div class="media">
+                            <a class="media__link" href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                        </div>
+                        <div class="media">
+                            <a class="media__link" href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__content">
+                    <div class="footer__info">
+                        <div class="footer__logo">
+                            <img class="footer__logo-image" src="../assets/images/svg/logo.svg" alt="logo">
+                            <p class="footer__logo-text">Ecobazar</p>
+                        </div>
+                        <p class="footer__info-text">Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis
+                            dui, eget bibendum magna congue nec.</p>
+                        <div class="footer__info-contact">
+                            <a class="footer__info-contact-number" href="tel:+(219) 555-0114">(219) 555-0114</a>
+                            <p class="footer__info-contact-text">or</p>
+                            <p class="footer__info-contact-email">Proxy@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="footer__links">
+                        <div class="footer__column">
+                            <h4 class="footer__column-title">My Account</h4>
+                            <ul class="footer__column-list">
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">My Account</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Order History</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Shoping Cart</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Wishlist</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <h4 class="footer__column-title">Helps</h4>
+                            <ul class="footer__column-list">
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Contact</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Faqs</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Terms & Condition</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <h4 class="footer__column-title">Proxy</h4>
+                            <ul class="footer__column-list">
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">About</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Shop</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Product</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Track Order</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <h4 class="footer__column-title">Categories</h4>
+                            <ul class="footer__column-list">
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Fruit & Vegetables</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Meat & Fish</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Bread & Bakery</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Beauty & Health</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__bottom">
+                    <p class="footer__bottom-copyright">© 2025 Ecobazar. All rights reserved.</p>
+                    <div class="footer__bottom-payments">
+                        <div class="footer__bottom-payments-image">
+                            <img class="footer__bottom-payments-img" src="../assets/images/svg/ApplePay.svg"
+                                alt="apple pay">
+                        </div>
+                        <div class="footer__bottom-payments-image">
+                            <img class="footer__bottom-payments-img" src="../assets/images/svg/visa-logo.svg"
+                                alt="visa">
+                        </div>
+                        <div class="footer__bottom-payments-image">
+                            <img class="footer__bottom-payments-img" src="../assets/images/svg/ApplePay.svg"
+                                alt="apple pay">
+                        </div>
+                        <div class="footer__bottom-payments-image">
+                            <img class="footer__bottom-payments-img" src="../assets/images/svg/ApplePay.svg"
+                                alt="apple pay">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

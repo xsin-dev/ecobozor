@@ -1,0 +1,34 @@
+@use "../../base/mixins" as *;
+@use "../../base/variables" as *;
+
+.breadcrumb {
+  background: linear-gradient(
+      90.02deg,
+      rgba(0, 0, 0, 0.9) 0.03%,
+      rgba(0, 0, 0, 0) 91.31%
+    ),
+    url(../../assets/images/png/details-header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // height: 120px;
+
+  &__wrapper {
+    height: 120px;
+    @include flexLayout(flex, flex-start, center, 8px, row nowrap);
+  }
+  &__item {
+    font-family: Poppins;
+    letter-spacing: 0%;
+    @include headingFonts($navbar-link, 16px, 400, 150%, capitalize);
+
+    &--active {
+      color: $button-color;
+    }
+  }
+  &__separator {
+    font-family: Poppins;
+    letter-spacing: 0%;
+    @include headingFonts($navbar-link, 20px, 600, 150%, capitalize);
+  }
+}

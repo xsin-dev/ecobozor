@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecobazar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="top-bar">
+                        <div class="top-bar__location">
+                            <img class="top-bar__location-img" src="./assets/images/svg/location.svg"
+                                alt="location icon">
+                            <p class="top-bar__location-text">Store Location: Lincoln- 344, Illinois, Chicago, USA</p>
+                        </div>
+                        <div class="top-bar__right">
+                            <div class="top-bar__right-selectors">
+                                <!-- <label for="lang">Choose language:</label> -->
+                                <select class="top-bar__right-selector" id="lang" name="lang">
+                                    <option value="en">Eng</option>
+                                    <option value="ru">rus</option>
+                                    <option value="uz">uzb</option>
+                                </select>
+                                <select class="top-bar__right-selector" id="currency" name="currency">
+                                    <option value="usd">Usd</option>
+                                    <option value="som">Som</option>
+                                    <option value="rubl">Rubl</option>
+                                </select>
+                            </div>
+                            <div class="top-bar__right-register">
+                                <a class="top-bar__right-register-singIn" href="#">Sing In</a>
+                                <p class="top-bar__right-register-slash">/</p>
+                                <a class="top-bar__right-register-singUp" href="#">Sing Up</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div class="container">
+                <div class="middle__content">
+                    <a href="index.html">
+                        <div class="logo">
+                            <img class="logo__image" src="./assets/images/svg/logo.svg" alt="logo">
+                            <p class="logo__text">Ecobazar</p>
+                        </div>
+                    </a>
+                    <div class="search-bar">
+                        <img class="search-bar__image" src="./assets/images/svg/search.svg" alt="search icon">
+                        <input class="search-bar__input" type="text" placeholder="Search">
+                        <button class="search-bar__btn">Search</button>
+                    </div>
+                    <div class="shopping-box">
+                        <img class="shopping-box__like" src="./assets/images/svg/like.svg" alt="like icon">
+                        <div class="shopping-box__card">
+                            <div class="shopping-box__cart" id="drawerOpen">
+                                <img class="shopping-box__cart-img" src="./assets/images/svg/korzinka.svg"
+                                    alt="cart icon">
+                                <div class="shopping-box__cart-count">
+                                    <p class="shopping-box__cart-count-text">2</p>
+                                </div>
+                            </div>
+                            <div class="shopping-box__list">
+                                <p class="shopping-box__list-text">Shopping cart:</p>
+                                <p class="shopping-box__list-price">$57.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-bottom__content">
+                    <nav class="navbar">
+                        <ul class="navbar__list">
+                            <li class="navbar__item">
+                                <select class="navbar__link" name="home" id="home">
+                                    <option value="home">Home</option>
+                                </select>
+                            </li>
+                            <li class="navbar__item">
+                                <select class="navbar__link" name="home" id="home">
+                                    <option value="home">shop</option>
+                                </select>
+                            </li>
+                            <li class="navbar__item">
+                                <select class="navbar__link" name="home" id="home">
+                                    <option value="home">pages</option>
+                                </select>
+                            </li>
+                            <li class="navbar__item">
+                                <select class="navbar__link" name="home" id="home">
+                                    <option value="home">blog</option>
+                                </select>
+                            </li>
+                            <li class="navbar__item">
+                                <a class="navbar__link" href="#">About Us</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a class="navbar__link" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header-bottom__content-phone">
+                        <img class="header-bottom__content-phone-img" src="./assets/images/svg/phone.svg"
+                            alt="phone icon">
+                        <a class="header-bottom__content-phone-text" href="tel:+(219) 555-0114">(219) 555-0114</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO MODAL -->
+    <div class="hero-modal">
+        <div class="hero-modal__wrapper">
+            <div class="hero-modal__image">
+                <img class="hero-modal__img" src="./assets/images/png/modal-img.png" alt="modal image">
+            </div>
+            <div class="hero-modal__content">
+                <h3 class="hero-modal__content-title">Subcribe to Our Newsletter</h3>
+                <p class="hero-modal__content-text">Subscribe to our newlletter and Save your <span>20% money </span>
+                    with discount code today.</p>
+                <form class="hero-modal__form">
+                    <input class="hero-modal__form-input" type="email" name="email" placeholder="Enter your email"
+                        required>
+                    <button class="hero-modal__form-btn" type="submit">Subscribe</button>
+                </form>
+                <div class="hero-modal__dont-show">
+                    <input class="hero-modal__dont-show-checkbox" type="checkbox">
+                    <p class="hero-modal__dont-show-text">Do not show this window</p>
+                </div>
+                <div class="hero-modal__close" id="modalClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO DRAWER -->
+    <div class="hero-drawer">
+        <div class="hero-drawer__wrapper">
+            <div class="hero-drawer__top">
+                <div class="hero-drawer__top-header">
+                    <h3 class="hero-drawer__title">Shopping Card (<span>2</span>)</h3>
+                    <div class="hero-drawer__close" id="drawerClose">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </div>
+                <div class="hero-drawer__items">
+                    <div class="hero-drawer__item">
+                        <div class="hero-drawer__item-content">
+                            <img class="hero-drawer__item-image" src="./assets/images/png/drawer-img1.png"
+                                alt="orange image">
+                            <div class="hero-drawer__item-info">
+                                <h4 class="hero-drawer__item-title">Fresh Indian Orange</h4>
+                                <p class="hero-drawer__item-text">1 kg x <span>12.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hero-drawer__item-remove">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                    <div class="hero-drawer__item">
+                        <div class="hero-drawer__item-content">
+                            <img class="hero-drawer__item-image" src="./assets/images/png/drawer-img1.png"
+                                alt="orange image">
+                            <div class="hero-drawer__item-info">
+                                <h4 class="hero-drawer__item-title">Fresh Indian Orange</h4>
+                                <p class="hero-drawer__item-text">1 kg x <span>12.00</span></p>
+                            </div>
+                        </div>
+                        <div class="hero-drawer__item-remove">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-drawer__bottom">
+                <div class="hero-drawer__bottom-meta">
+                    <p class="hero-drawer__bottom-count"><span>2</span> Product</p>
+                    <span class="hero-drawer__bottom-price">$26.00</span>
+                </div>
+                <button class="hero-drawer__bottom-btn hero-drawer__bottom-btn">Checkout</button>
+                <a href="./pages/shoppingCart.html">
+                    <button class="hero-drawer__bottom-btn hero-drawer__bottom-btn--white">Go To Cart</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero__wrapper">
+                    <div class="hero__content">
+                        <h2 class="hero__content-title">Fresh & Healthy Organic Food</h2>
+                        <div class="hero__content-subtitle">
+                            <p class="hero__content-info">Sale up to <span>30% OFF</span></p>
+                            <p class="hero__content-text">Free shipping on all your order.</p>
+                        </div>
+                        <div class="main__button main__button--white" id="modalOpen">
+                            <a class="main__button-text" href="#">Shop now</a>
+                            <img class="main__button-icon" src="./assets/images/svg/arrow.svg" alt="arrow icon">
+                        </div>
+                    </div>
+                    <div class="hero__side">
+                        <div class="hero__side-banner">
+                            <p class="hero__side-banner-title">Summer Sale</p>
+                            <h2 class="hero__side-banner-subtitle">75% OFF</h2>
+                            <p class="hero__side-banner-text">Only Fruit & Vegetable</p>
+                            <div class="main__button">
+                                <a class="main__button-text" href="#">Shop now</a>
+                                <img class="main__button-icon" src="./assets/images/svg/arrow.svg" alt="arrow icon">
+                            </div>
+                        </div>
+                        <div class="hero__side-info">
+                            <p class="hero__side-info-text">Best Deal</p>
+                            <h2 class="hero__side-info-title">Special Products Deal of the Month</h2>
+                            <div class="main__button">
+                                <a class="main__button-text" href="#">Shop now</a>
+                                <img class="main__button-icon" src="./assets/images/svg/arrow.svg" alt="arrow icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__bottom">
+                    <div class="hero__bottom-box">
+                        <img class="hero__bottom-box-image" src="./assets/images/svg/truck-icon.svg" alt="truck icon">
+                        <div class="hero__bottom-box-content">
+                            <p class="hero__bottom-box-content-title">Free Shipping</p>
+                            <p class="hero__bottom-box-content-text">Free shipping on all your order</p>
+                        </div>
+                    </div>
+                    <div class="hero__bottom-box">
+                        <img class="hero__bottom-box-image" src="./assets/images/svg/truck-icon.svg" alt="truck icon">
+                        <div class="hero__bottom-box-content">
+                            <p class="hero__bottom-box-content-title">Free Shipping</p>
+                            <p class="hero__bottom-box-content-text">Free shipping on all your order</p>
+                        </div>
+                    </div>
+                    <div class="hero__bottom-box">
+                        <img class="hero__bottom-box-image" src="./assets/images/svg/truck-icon.svg" alt="truck icon">
+                        <div class="hero__bottom-box-content">
+                            <p class="hero__bottom-box-content-title">Free Shipping</p>
+                            <p class="hero__bottom-box-content-text">Free shipping on all your order</p>
+                        </div>
+                    </div>
+                    <div class="hero__bottom-box">
+                        <img class="hero__bottom-box-image" src="./assets/images/svg/truck-icon.svg" alt="truck icon">
+                        <div class="hero__bottom-box-content">
+                            <p class="hero__bottom-box-content-title">Free Shipping</p>
+                            <p class="hero__bottom-box-content-text">Free shipping on all your order</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORIES -->
+        <section class="categories">
+            <div class="container">
+                <div class="categories__wrapper">
+                    <div class="section__header">
+                        <h2 class="section__header-title">Popular Categories</h2>
+                        <a class="section__header-button" href="#">
+                            <p class="section__header-button-text">View All</p>
+                            <img class="section__header-button-image" src="./assets/images/svg/arrow.svg"
+                                alt="arrow icon">
+                        </a>
+                    </div>
+                    <div class="categories__cards">
+                        <div class="categories__card">
+                            <img class="categories__card-image" src="./assets/images/png/fruit.png" alt="fruit image">
+                            <p class="categories__card-text">Fresh Fruit</p>
+                        </div>
+                        <div class="categories__card">
+                            <img class="categories__card-image" src="./assets/images/png/vagitables.png"
+                                alt="fruit image">
+                            <p class="categories__card-text">Fresh Vegetables</p>
+                        </div>
+                        <div class="categories__card">
+                            <img class="categories__card-image" src="./assets/images/png/fish.png" alt="fruit image">
+                            <p class="categories__card-text">Meat & Fish</p>
+                        </div>
+                        <div class="categories__card">
+                            <img class="categories__card-image" src="./assets/images/png/snacks.png" alt="Snacks image">
+                            <p class="categories__card-text">Snacks</p>
+                        </div>
+                        <div class="categories__card">
+                            <img class="categories__card-image" src="./assets/images/png/beverages.png"
+                                alt="Beverages image">
+                            <p class="categories__card-text">Beverages</p>
+                        </div>
+                        <div class="categories__card">
+                            <img class="categories__card-image" src="./assets/images/png/beauty.png"
+                                alt="Beauty & Health image">
+                            <p class="categories__card-text">Beauty & Health</p>
+                        </div>
+                        <div class="categories__card">
+                            <img class="categories__card-image" src="./assets/images/png/bakery.png"
+                                alt="Bread & Bakery image">
+                            <p class="categories__card-text">Bread & Bakery</p>
+                        </div>
+                        <div class="categories__card">
+                            <img class="categories__card-image" src="./assets/images/png/bakery-needs.png"
+                                alt="Baking Needs image">
+                            <p class="categories__card-text">Baking Needs</p>
+                        </div>
+                        <div class="categories__card">
+                            <img class="categories__card-image" src="./assets/images/png/cooking.png"
+                                alt="Cooking image">
+                            <p class="categories__card-text">Cooking</p>
+                        </div>
+                        <div class="categories__card">
+                            <img class="categories__card-image" src="./assets/images/png/deabetic-food.png"
+                                alt="Diabetic Food image">
+                            <p class="categories__card-text">Diabetic Food</p>
+                        </div>
+                        <div class="categories__card">
+                            <img class="categories__card-image" src="./assets/images/png/detergents.png"
+                                alt="Dish Detergents image">
+                            <p class="categories__card-text">Dish Detergents</p>
+                        </div>
+                        <div class="categories__card">
+                            <img class="categories__card-image" src="./assets/images/png/oil.png" alt="Oil image">
+                            <p class="categories__card-text">Oil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- PRODUCTS -->
+        <section class="products">
+            <div class="container">
+                <div class="products__wrapper">
+                    <div class="section__header">
+                        <h2 class="section__header-title">Popular Products</h2>
+                        <a class="section__header-button" href="#">
+                            <p class="section__header-button-text">View All</p>
+                            <img class="section__header-button-image" src="./assets/images/svg/arrow.svg"
+                                alt="arrow icon">
+                        </a>
+                    </div>
+                    <div class="products__cards">
+                        <a href="./pages/detailsPage.html">
+                            <div class="products__card">
+                                <div class="products__card-image">
+                                    <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                        alt="product image">
+                                </div>
+                                <div class="products__card-content">
+                                    <div class="products__card-info">
+                                        <p class="products__card-title">Chinese cabbage</p>
+                                        <div class="products__card-price-box">
+                                            <p class="products__card-price">$14.99</p>
+                                        </div>
+                                        <div class="products__card-rating">
+                                            <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                                alt="star image">
+                                        </div>
+                                    </div>
+                                    <div class="products__card-cart">
+                                        <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                            alt="cart icon">
+                                    </div>
+                                </div>
+                                <div class="products__card-action">
+                                    <div class="products__card-like">
+                                        <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                            alt="like icon">
+                                    </div>
+                                    <div class="products__card-eye">
+                                        <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                            alt="eye icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/pages/detailsPage.html">
+                            <div class="products__card">
+                                <div class="products__card-image">
+                                    <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                        alt="product image">
+                                </div>
+                                <div class="products__card-content">
+                                    <div class="products__card-info">
+                                        <p class="products__card-title">Chinese cabbage</p>
+                                        <div class="products__card-price-box">
+                                            <p class="products__card-price">$14.99</p>
+                                            <p class="products__card-old-price">$20.99</p>
+                                        </div>
+                                        <div class="products__card-rating">
+                                            <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                                alt="star image">
+                                        </div>
+                                    </div>
+                                    <div class="products__card-cart">
+                                        <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                            alt="cart icon">
+                                    </div>
+                                </div>
+                                <div class="products__card-action">
+                                    <div class="products__card-like">
+                                        <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                            alt="like icon">
+                                    </div>
+                                    <div class="products__card-eye">
+                                        <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                            alt="eye icon">
+                                    </div>
+                                </div>
+                                <div class="products__card-badge">
+                                    <p class="products__card-badge-text">Sale </p>
+                                    <p class="products__card-badge-percentage">50%</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./pages/detailsPage.html">
+                            <div class="products__card">
+                                <div class="products__card-image">
+                                    <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                        alt="product image">
+                                </div>
+                                <div class="products__card-content">
+                                    <div class="products__card-info">
+                                        <p class="products__card-title">Chinese cabbage</p>
+                                        <div class="products__card-price-box">
+                                            <p class="products__card-price">$14.99</p>
+                                        </div>
+                                        <div class="products__card-rating">
+                                            <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                                alt="star image">
+                                        </div>
+                                    </div>
+                                    <div class="products__card-cart">
+                                        <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                            alt="cart icon">
+                                    </div>
+                                </div>
+                                <div class="products__card-action">
+                                    <div class="products__card-like">
+                                        <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                            alt="like icon">
+                                    </div>
+                                    <div class="products__card-eye">
+                                        <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                            alt="eye icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./pages/detailsPage.html">
+                            <div class="products__card">
+                                <div class="products__card-image">
+                                    <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                        alt="product image">
+                                </div>
+                                <div class="products__card-content">
+                                    <div class="products__card-info">
+                                        <p class="products__card-title">Chinese cabbage</p>
+                                        <div class="products__card-price-box">
+                                            <p class="products__card-price">$14.99</p>
+                                        </div>
+                                        <div class="products__card-rating">
+                                            <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                                alt="star image">
+                                        </div>
+                                    </div>
+                                    <div class="products__card-cart">
+                                        <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                            alt="cart icon">
+                                    </div>
+                                </div>
+                                <div class="products__card-action">
+                                    <div class="products__card-like">
+                                        <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                            alt="like icon">
+                                    </div>
+                                    <div class="products__card-eye">
+                                        <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                            alt="eye icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./pages/detailsPage.html">
+                            <div class="products__card">
+                                <div class="products__card-image">
+                                    <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                        alt="product image">
+                                </div>
+                                <div class="products__card-content">
+                                    <div class="products__card-info">
+                                        <p class="products__card-title">Chinese cabbage</p>
+                                        <div class="products__card-price-box">
+                                            <p class="products__card-price">$14.99</p>
+                                        </div>
+                                        <div class="products__card-rating">
+                                            <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                                alt="star image">
+                                        </div>
+                                    </div>
+                                    <div class="products__card-cart">
+                                        <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                            alt="cart icon">
+                                    </div>
+                                </div>
+                                <div class="products__card-action">
+                                    <div class="products__card-like">
+                                        <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                            alt="like icon">
+                                    </div>
+                                    <div class="products__card-eye">
+                                        <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                            alt="eye icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./pages/detailsPage.html">
+                            <div class="products__card">
+                                <div class="products__card-image">
+                                    <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                        alt="product image">
+                                </div>
+                                <div class="products__card-content">
+                                    <div class="products__card-info">
+                                        <p class="products__card-title">Chinese cabbage</p>
+                                        <div class="products__card-price-box">
+                                            <p class="products__card-price">$14.99</p>
+                                        </div>
+                                        <div class="products__card-rating">
+                                            <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                                alt="star image">
+                                        </div>
+                                    </div>
+                                    <div class="products__card-cart">
+                                        <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                            alt="cart icon">
+                                    </div>
+                                </div>
+                                <div class="products__card-action">
+                                    <div class="products__card-like">
+                                        <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                            alt="like icon">
+                                    </div>
+                                    <div class="products__card-eye">
+                                        <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                            alt="eye icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./pages/detailsPage.html">
+                            <div class="products__card">
+                                <div class="products__card-image">
+                                    <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                        alt="product image">
+                                </div>
+                                <div class="products__card-content">
+                                    <div class="products__card-info">
+                                        <p class="products__card-title">Chinese cabbage</p>
+                                        <div class="products__card-price-box">
+                                            <p class="products__card-price">$14.99</p>
+                                        </div>
+                                        <div class="products__card-rating">
+                                            <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                                alt="star image">
+                                        </div>
+                                    </div>
+                                    <div class="products__card-cart">
+                                        <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                            alt="cart icon">
+                                    </div>
+                                </div>
+                                <div class="products__card-action">
+                                    <div class="products__card-like">
+                                        <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                            alt="like icon">
+                                    </div>
+                                    <div class="products__card-eye">
+                                        <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                            alt="eye icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./pages/detailsPage.html">
+                            <div class="products__card">
+                                <div class="products__card-image">
+                                    <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                        alt="product image">
+                                </div>
+                                <div class="products__card-content">
+                                    <div class="products__card-info">
+                                        <p class="products__card-title">Chinese cabbage</p>
+                                        <div class="products__card-price-box">
+                                            <p class="products__card-price">$14.99</p>
+                                        </div>
+                                        <div class="products__card-rating">
+                                            <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                                alt="star image">
+                                        </div>
+                                    </div>
+                                    <div class="products__card-cart">
+                                        <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                            alt="cart icon">
+                                    </div>
+                                </div>
+                                <div class="products__card-action">
+                                    <div class="products__card-like">
+                                        <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                            alt="like icon">
+                                    </div>
+                                    <div class="products__card-eye">
+                                        <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                            alt="eye icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./pages/detailsPage.html">
+                            <div class="products__card">
+                                <div class="products__card-image">
+                                    <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                        alt="product image">
+                                </div>
+                                <div class="products__card-content">
+                                    <div class="products__card-info">
+                                        <p class="products__card-title">Chinese cabbage</p>
+                                        <div class="products__card-price-box">
+                                            <p class="products__card-price">$14.99</p>
+                                        </div>
+                                        <div class="products__card-rating">
+                                            <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                                alt="star image">
+                                        </div>
+                                    </div>
+                                    <div class="products__card-cart">
+                                        <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                            alt="cart icon">
+                                    </div>
+                                </div>
+                                <div class="products__card-action">
+                                    <div class="products__card-like">
+                                        <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                            alt="like icon">
+                                    </div>
+                                    <div class="products__card-eye">
+                                        <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                            alt="eye icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="./pages/detailsPage.html">
+                            <div class="products__card">
+                                <div class="products__card-image">
+                                    <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                        alt="product image">
+                                </div>
+                                <div class="products__card-content">
+                                    <div class="products__card-info">
+                                        <p class="products__card-title">Chinese cabbage</p>
+                                        <div class="products__card-price-box">
+                                            <p class="products__card-price">$14.99</p>
+                                            <p class="products__card-old-price">$20.99</p>
+                                        </div>
+                                        <div class="products__card-rating">
+                                            <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                                alt="star image">
+                                        </div>
+                                    </div>
+                                    <div class="products__card-cart">
+                                        <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                            alt="cart icon">
+                                    </div>
+                                </div>
+                                <div class="products__card-action">
+                                    <div class="products__card-like">
+                                        <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                            alt="like icon">
+                                    </div>
+                                    <div class="products__card-eye">
+                                        <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                            alt="eye icon">
+                                    </div>
+                                </div>
+                                <div class="products__card-badge">
+                                    <p class="products__card-badge-text">Sale </p>
+                                    <p class="products__card-badge-percentage">50%</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROMOTIONS -->
+        <section class="promotions">
+            <div class="container">
+                <div class="promotions__boxes">
+                    <div class="promotions__box promotions__first">
+                        <h4 class="promotions__box-top-title">Best Deals</h4>
+                        <h4 class="promotions__box-title">Sale of the Month</h4>
+                        <div class="promotions__box-countdown">
+                            <div class="promotions__box-countdown-content">
+                                <span id="days" class="promotions__box-countdown-time">00</span>
+                                <p class="promotions__box-countdown-text">Days</p>
+                            </div>
+                            <p class="promotions__box-countdown-dot">:</p>
+                            <div class="promotions__box-countdown-content">
+                                <span id="hours" class="promotions__box-countdown-time">00</span>
+                                <p class="promotions__box-countdown-text">Hours</p>
+                            </div>
+                            <p class="promotions__box-countdown-dot">:</p>
+                            <div class="promotions__box-countdown-content">
+                                <span id="mins" class="promotions__box-countdown-time">00</span>
+                                <p class="promotions__box-countdown-text">Mins</p>
+                            </div>
+                            <p class="promotions__box-countdown-dot">:</p>
+                            <div class="promotions__box-countdown-content">
+                                <span id="sec" class="promotions__box-countdown-time">00</span>
+                                <p class="promotions__box-countdown-text">Sec</p>
+                            </div>
+                        </div>
+                        <div class="main__button main__button--white">
+                            <a class="main__button-text" href="#">Shop now</a>
+                            <img class="main__button-icon" src="./assets/images/svg/arrow.svg" alt="arrow icon">
+                        </div>
+                    </div>
+                    <div class="promotions__box promotions__second">
+                        <h4 class="promotions__box-top-title">85% Fat Free</h4>
+                        <h4 class="promotions__box-title">Low-Fat Meat</h4>
+                        <div class="promotions__box-second-badge">
+                            <p class="promotions__box-second-badge-text">Started at <span
+                                    class="promotions__box-second-badge-price">$79.99</span></p>
+                        </div>
+                        <div class="main__button main__button--white">
+                            <a class="main__button-text" href="#">Shop now</a>
+                            <img class="main__button-icon" src="./assets/images/svg/arrow.svg" alt="arrow icon">
+                        </div>
+                    </div>
+                    <div class="promotions__box promotions__third">
+                        <h4 class="promotions__box-top-title">Best Deals</h4>
+                        <h4 class="promotions__box-title">Sale of the Month</h4>
+                        <div class="promotions__box-third-badge">
+                            <p class="promotions__box-third-badge-text">Started at <span
+                                    class="promotions__box-third-badge-percentage">64% OFF</span></p>
+                        </div>
+                        <div class="main__button main__button--white">
+                            <a class="main__button-text" href="#">Shop now</a>
+                            <img class="main__button-icon" src="./assets/images/svg/arrow.svg" alt="arrow icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEALS -->
+        <section class="deals">
+            <div class="container">
+                <div class="deals__wrapper">
+                    <div class="section__header">
+                        <h2 class="section__header-title">Hot Deals</h2>
+                        <a class="section__header-button" href="#">
+                            <p class="section__header-button-text">View All</p>
+                            <img class="section__header-button-image" src="./assets/images/svg/arrow.svg"
+                                alt="arrow icon">
+                        </a>
+                    </div>
+                    <div class="deals__cards">
+                        <div class="deals__card">
+                            <div class="deals__card-image">
+                                <img class="deals__card-img" src="./assets/images/png/cabbage.jpg" alt="product image">
+                            </div>
+                            <div class="deals__card-buttons">
+                                <div class="like-button">
+                                    <img class="like-button__icon" src="./assets/images/svg/like.svg" alt="like icon">
+                                </div>
+                                <button class="add-to-cart__button">
+                                    Add to Cart
+                                    <img class="add-to-cart__button-img" src="./assets/images/svg/white-cart.svg"
+                                        alt="cart img">
+                                </button>
+                                <div class="eye-button">
+                                    <img class="eye-button__icon" src="./assets/images/svg/eye.svg" alt="eye icon"
+                                        width="20" height="20">
+                                </div>
+                            </div>
+                            <div class="deals__card-content">
+                                <p class="deals__card-title">Chinese cabbage</p>
+                                <div class="deals__card-price-box">
+                                    <p class="deals__card-price">$14.99</p>
+                                    <p class="deals__card-old-price">$20.99</p>
+                                </div>
+                                <div class="deals__card-rating">
+                                    <img class="deals__card-rating-star" src="./assets/images/svg/stars.svg"
+                                        alt="star image" width="20" height="20">
+                                    <p class="deals__card-rating-feedback"> ( Feedback)</p>
+                                </div>
+                            </div>
+                            <div class="deals__card-countdown">
+                                <p class="deals__card-countdown-title">Hurry up! Offer ends In:</p>
+                                <div class="deals__card-countdown-wrapper">
+                                    <div class="deals__card-countdown-content">
+                                        <span id="days" class="deals__card-countdown-time">00</span>
+                                        <p class="deals__card-countdown-text">Days</p>
+                                    </div>
+                                    <p class="deals__card-countdown-dot">:</p>
+                                    <div class="deals__card-countdown-content">
+                                        <span id="hours" class="deals__card-countdown-time">00</span>
+                                        <p class="deals__card-countdown-text">Hours</p>
+                                    </div>
+                                    <p class="deals__card-countdown-dot">:</p>
+                                    <div class="deals__card-countdown-content">
+                                        <span id="mins" class="deals__card-countdown-time">00</span>
+                                        <p class="deals__card-countdown-text">Mins</p>
+                                    </div>
+                                    <p class="deals__card-countdown-dot">:</p>
+                                    <div class="deals__card-countdown-content">
+                                        <span id="sec" class="deals__card-countdown-time">00</span>
+                                        <p class="deals__card-countdown-text">Sec</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="deals__card-badges">
+                                <p class="deals__card-badge deals__card-badge--red">Sale <span
+                                        class="deals__card-badge-percentage">50%</span></p>
+                                <p class="deals__card-badge deals__card-badge--blue">Best Sale</p>
+                            </div>
+                        </div>
+                        <div class="products__card">
+                            <div class="products__card-image">
+                                <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                    alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                        <p class="products__card-old-price">$20.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card">
+                            <div class="products__card-image">
+                                <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                    alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                        <p class="products__card-old-price">$20.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card">
+                            <div class="products__card-image">
+                                <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                    alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                        <p class="products__card-old-price">$20.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card">
+                            <div class="products__card-image">
+                                <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                    alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                        <p class="products__card-old-price">$20.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card">
+                            <div class="products__card-image">
+                                <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                    alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                        <p class="products__card-old-price">$20.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                            <div class="products__card-badge">
+                                <p class="products__card-badge-text">Sale </p>
+                                <p class="products__card-badge-percentage">50%</p>
+                            </div>
+                        </div>
+                        <div class="products__card">
+                            <div class="products__card-image">
+                                <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                    alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                        <p class="products__card-old-price">$20.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card">
+                            <div class="products__card-image">
+                                <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                    alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                        <p class="products__card-old-price">$20.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card">
+                            <div class="products__card-image">
+                                <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                    alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                        <p class="products__card-old-price">$20.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card">
+                            <div class="products__card-image">
+                                <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                    alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                        <p class="products__card-old-price">$20.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card">
+                            <div class="products__card-image">
+                                <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                    alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                        <p class="products__card-old-price">$20.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                            <div class="products__card-badge">
+                                <p class="products__card-badge-text">Sale </p>
+                                <p class="products__card-badge-percentage">50%</p>
+                            </div>
+                        </div>
+                        <div class="products__card">
+                            <div class="products__card-image">
+                                <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                    alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                        <p class="products__card-old-price">$20.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANNER -->
+        <section class="banner">
+            <div class="container">
+                <div class="banner__wrapper">
+                    <div class="banner__content">
+                        <h4 class="banner__content-title">Summer Sale</h4>
+                        <h2 class="banner__content-text"><span>37%</span> OFF</h2>
+                        <p class="banner__content-info">Free on all your order, Free Shipping and 30 days money-back
+                            guarantee</p>
+                        <div class="main__button main__button--green">
+                            <a class="main__button-text" href="#">Shop now</a>
+                            <img class="main__button-icon" src="./assets/images/svg/arrow-white.svg" alt="arrow icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED -->
+        <section class="featured-products">
+            <div class="container">
+                <div class="featured-products__wrapper">
+                    <div class="section__header">
+                        <h2 class="section__header-title">Featured Products</h2>
+                        <a class="section__header-button" href="#">
+                            <p class="section__header-button-text">View All</p>
+                            <img class="section__header-button-image" src="./assets/images/svg/arrow.svg"
+                                alt="arrow icon">
+                        </a>
+                    </div>
+                    <div class="featured-products__cards">
+                        <div class="products__card">
+                            <div class="products__card-image">
+                                <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                    alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                        <p class="products__card-old-price">$20.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card">
+                            <div class="products__card-image">
+                                <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                    alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                        <p class="products__card-old-price">$20.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card">
+                            <div class="products__card-image">
+                                <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                    alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                        <p class="products__card-old-price">$20.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card">
+                            <div class="products__card-image">
+                                <img class="products__card-img" src="./assets/images/png/cabbage.jpg"
+                                    alt="product image">
+                            </div>
+                            <div class="products__card-content">
+                                <div class="products__card-info">
+                                    <p class="products__card-title">Chinese cabbage</p>
+                                    <div class="products__card-price-box">
+                                        <p class="products__card-price">$14.99</p>
+                                        <p class="products__card-old-price">$20.99</p>
+                                    </div>
+                                    <div class="products__card-rating">
+                                        <img class="products__card-rating-star" src="./assets/images/svg/stars.svg"
+                                            alt="star image">
+                                    </div>
+                                </div>
+                                <div class="products__card-cart">
+                                    <img class="products__card-cart-icon" src="./assets/images/svg/korzinka.svg"
+                                        alt="cart icon">
+                                </div>
+                            </div>
+                            <div class="products__card-action">
+                                <div class="products__card-like">
+                                    <img class="products__card-like-icon" src="./assets/images/svg/like.svg"
+                                        alt="like icon">
+                                </div>
+                                <div class="products__card-eye">
+                                    <img class="products__card-eye-icon" src="./assets/images/svg/eye.svg"
+                                        alt="eye icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWS -->
+        <section class="news">
+            <div class="container">
+                <div class="news__wrapper">
+                    <h2 class="news__title">Latest news</h2>
+                    <div class="news__boxes">
+                        <div class="news__box">
+                            <div class="news__box-image">
+                                <img class="news__box-img" src="./assets/images/png/news-img.jpg" alt="news img">
+                                <div class="news__box-date">
+                                    <p class="news__box-date-day">12</p>
+                                    <p class="news__box-date-month">feb</p>
+                                </div>
+                            </div>
+                            <div class="news__box-info">
+                                <div class="news__box-meta">
+                                    <span class="news__box-meta-item">
+                                        <img class="news__box-meta-img" src="./assets/images/svg/category-icon.svg"
+                                            alt="category icon">Food
+                                    </span>
+                                    <span class="news__box-meta-item">
+                                        <img class="news__box-meta-img" src="./assets/images/svg/user-icon.svg"
+                                            alt="category icon">By Admin
+                                    </span>
+                                    <span class="news__box-meta-item">
+                                        <img class="news__box-meta-img" src="./assets/images/svg/comment-icon.svg"
+                                            alt="category icon">65 Comment
+                                    </span>
+                                </div>
+                                <a class="news__box-text-link" href="#">
+                                    <p class="news__box-text">Curabitur porttitor orci eget neque accumsan
+                                        venenatis.Nunc fermentum.Curabitur porttitor orci eget neque accumsan
+                                        venenatis.Nunc fermentum.</p>
+                                </a>
+                                <button class="news__box-button">Read more
+                                    <img class="news__box-button-img" src="./assets/images/svg/arrow.svg"
+                                        alt="arrow icon">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="news__box">
+                            <div class="news__box-image">
+                                <img class="news__box-img" src="./assets/images/png/news-img2.jpg" alt="news img">
+                                <div class="news__box-date">
+                                    <p class="news__box-date-day">12</p>
+                                    <p class="news__box-date-month">feb</p>
+                                </div>
+                            </div>
+                            <div class="news__box-info">
+                                <div class="news__box-meta">
+                                    <span class="news__box-meta-item">
+                                        <img class="news__box-meta-img" src="./assets/images/svg/category-icon.svg"
+                                            alt="category icon">Food
+                                    </span>
+                                    <span class="news__box-meta-item">
+                                        <img class="news__box-meta-img" src="./assets/images/svg/user-icon.svg"
+                                            alt="category icon">By Admin
+                                    </span>
+                                    <span class="news__box-meta-item">
+                                        <img class="news__box-meta-img" src="./assets/images/svg/comment-icon.svg"
+                                            alt="category icon">65 Comment
+                                    </span>
+                                </div>
+                                <a class="news__box-text-link" href="#">
+                                    <p class="news__box-text">Eget lobortis lorem lacinia.</p>
+                                </a>
+                                <button class="news__box-button">Read more
+                                    <img class="news__box-button-img" src="./assets/images/svg/arrow.svg"
+                                        alt="arrow icon">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="news__box">
+                            <div class="news__box-image">
+                                <img class="news__box-img" src="./assets/images/png/news-img3.jpg" alt="news img">
+                                <div class="news__box-date">
+                                    <p class="news__box-date-day">12</p>
+                                    <p class="news__box-date-month">feb</p>
+                                </div>
+                            </div>
+                            <div class="news__box-info">
+                                <div class="news__box-meta">
+                                    <span class="news__box-meta-item">
+                                        <img class="news__box-meta-img" src="./assets/images/svg/category-icon.svg"
+                                            alt="category icon">Food
+                                    </span>
+                                    <span class="news__box-meta-item">
+                                        <img class="news__box-meta-img" src="./assets/images/svg/user-icon.svg"
+                                            alt="category icon">By Admin
+                                    </span>
+                                    <span class="news__box-meta-item">
+                                        <img class="news__box-meta-img" src="./assets/images/svg/comment-icon.svg"
+                                            alt="category icon">65 Comment
+                                    </span>
+                                </div>
+                                <a class="news__box-text-link" href="#">
+                                    <p class="news__box-text">Maecenas blandit risus elementum mauris malesuada.</p>
+                                </a>
+                                <button class="news__box-button">Read more
+                                    <img class="news__box-button-img" src="./assets/images/svg/arrow.svg"
+                                        alt="arrow icon">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="testimonials__wrapper">
+                    <div class="testimonials__header">
+                        <h2 class="testimonials__header-title">Client Testimonials</h2>
+                        <div class="testimonials__header-buttons">
+                            <button class="testimonials__header-button">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                            <button class="testimonials__header-button">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="testimonials__cards">
+                        <div class="testimonials__card">
+                            <img class="testimonials__card-quotation" src="./assets/images/svg/quotation-icon.svg"
+                                alt="quotation icon" height="26" width="32">
+                            <p class="testimonials__card-text">Pellentesque eu nibh eget mauris congue mattis mattis nec
+                                tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec
+                                sed neque eget</p>
+                            <div class="testimonials__card-bottom">
+                                <div class="testimonials__card-user">
+                                    <img class="testimonials__card-user-img"
+                                        src="./assets/images/png/testimonials-user.jpg" alt="user image">
+                                    <span class="testimonials__card-user-info">
+                                        <p class="testimonials__card-user-name">Robert Fox</p>
+                                        <p class="testimonials__card-user-position">Customer</p>
+                                    </span>
+                                </div>
+                                <div class="testimonials__card-rating">
+                                    <img class="testimonials__card-rating-img" src="./assets/images/svg/stars.svg"
+                                        alt="star icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonials__card">
+                            <img class="testimonials__card-quotation" src="./assets/images/svg/quotation-icon.svg"
+                                alt="quotation icon" height="26" width="32">
+                            <p class="testimonials__card-text">Pellentesque eu nibh eget mauris congue mattis mattis nec
+                                tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec
+                                sed neque eget</p>
+                            <div class="testimonials__card-bottom">
+                                <div class="testimonials__card-user">
+                                    <img class="testimonials__card-user-img"
+                                        src="./assets/images/png/testimonials-user.jpg" alt="user image">
+                                    <span class="testimonials__card-user-info">
+                                        <p class="testimonials__card-user-name">Robert Fox</p>
+                                        <p class="testimonials__card-user-position">Customer</p>
+                                    </span>
+                                </div>
+                                <div class="testimonials__card-rating">
+                                    <img class="testimonials__card-rating-img" src="./assets/images/svg/stars.svg"
+                                        alt="star icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonials__card">
+                            <img class="testimonials__card-quotation" src="./assets/images/svg/quotation-icon.svg"
+                                alt="quotation icon" height="26" width="32">
+                            <p class="testimonials__card-text">Pellentesque eu nibh eget mauris congue mattis mattis nec
+                                tellus. Phasellus imperdiet elit eu magna dictum, bibendum cursus velit sodales. Donec
+                                sed neque eget</p>
+                            <div class="testimonials__card-bottom">
+                                <div class="testimonials__card-user">
+                                    <img class="testimonials__card-user-img"
+                                        src="./assets/images/png/testimonials-user.jpg" alt="user image">
+                                    <span class="testimonials__card-user-info">
+                                        <p class="testimonials__card-user-name">Robert Fox</p>
+                                        <p class="testimonials__card-user-position">Customer</p>
+                                    </span>
+                                </div>
+                                <div class="testimonials__card-rating">
+                                    <img class="testimonials__card-rating-img" src="./assets/images/svg/stars.svg"
+                                        alt="star icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARTNERS -->
+        <section class="partners">
+            <div class="container">
+                <div class="partners__wrapper">
+                    <img class="partners__img" src="./assets/images/svg/step.svg" alt="step icon">
+                    <span class="partners__line"></span>
+                    <img class="partners__img" src="./assets/images/svg/mango.svg" alt="mango icon">
+                    <span class="partners__line"></span>
+                    <img class="partners__img" src="./assets/images/svg/food-network.svg" alt="food-network icon">
+                    <span class="partners__line"></span>
+                    <img class="partners__img" src="./assets/images/svg/food.svg" alt="food icon">
+                    <span class="partners__line"></span>
+                    <img class="partners__img" src="./assets/images/svg/bookoff-corporation-logo.svg"
+                        alt="bookoff-corporation icon">
+                    <span class="partners__line"></span>
+                    <img class="partners__img" src="./assets/images/svg/g-series.svg" alt="g-series icon">
+                </div>
+            </div>
+        </section>
+
+        <!-- INSTAGRAM -->
+        <section class="instagram">
+            <div class="container">
+                <div class="instagram__wrapper">
+                    <h2 class="instagram__title">Follow us on Instagram</h2>
+                    <div class="instagram__cards">
+                        <div class="instagram__card">
+                            <a href="#">
+                                <img class="instagram__card-img" src="./assets/images/png/instagram-post.jpg"
+                                    alt="instagram post">
+                            </a>
+                        </div>
+                        <div class="instagram__card">
+                            <a href="#">
+                                <img class="instagram__card-img" src="./assets/images/png/instagram-post.jpg"
+                                    alt="instagram post">
+                            </a>
+                        </div>
+                        <div class="instagram__card">
+                            <a href="#">
+                                <img class="instagram__card-img" src="./assets/images/png/instagram-post.jpg"
+                                    alt="instagram post">
+                            </a>
+                        </div>
+                        <div class="instagram__card">
+                            <a href="#">
+                                <img class="instagram__card-img" src="./assets/images/png/instagram-post.jpg"
+                                    alt="instagram post">
+                            </a>
+                        </div>
+                        <div class="instagram__card">
+                            <a href="#">
+                                <img class="instagram__card-img" src="./assets/images/png/instagram-post.jpg"
+                                    alt="instagram post">
+                            </a>
+                        </div>
+                        <div class="instagram__card">
+                            <a href="#">
+                                <img class="instagram__card-img" src="./assets/images/png/instagram-post.jpg"
+                                    alt="instagram post">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter__wrapper">
+                    <div class="newsletter__info">
+                        <h4 class="newsletter__info-title">Subcribe our Newsletter</h4>
+                        <p class="newsletter__info-text">Pellentesque eu nibh eget mauris congue mattis mattis nec
+                            tellus. Phasellus imperdiet elit eu magna.</p>
+                    </div>
+                    <form class="newsletter__form">
+                        <input class="newsletter__form-input" type="email" name="email" placeholder="Your email address"
+                            required>
+                        <button class="newsletter__form-btn" type="submit">Subscribe</button>
+                    </form>
+                    <div class="medias">
+                        <div class="media">
+                            <a class="media__link" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                        <div class="media">
+                            <a class="media__link" href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                        <div class="media">
+                            <a class="media__link" href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                        </div>
+                        <div class="media">
+                            <a class="media__link" href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__content">
+                    <div class="footer__info">
+                        <div class="footer__logo">
+                            <img class="footer__logo-image" src="./assets/images/svg/logo.svg" alt="logo">
+                            <p class="footer__logo-text">Ecobazar</p>
+                        </div>
+                        <p class="footer__info-text">Morbi cursus porttitor enim lobortis molestie. Duis gravida turpis
+                            dui, eget bibendum magna congue nec.</p>
+                        <div class="footer__info-contact">
+                            <a class="footer__info-contact-number" href="tel:+(219) 555-0114">(219) 555-0114</a>
+                            <p class="footer__info-contact-text">or</p>
+                            <p class="footer__info-contact-email">Proxy@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="footer__links">
+                        <div class="footer__column">
+                            <h4 class="footer__column-title">My Account</h4>
+                            <ul class="footer__column-list">
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">My Account</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Order History</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Shoping Cart</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Wishlist</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <h4 class="footer__column-title">Helps</h4>
+                            <ul class="footer__column-list">
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Contact</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Faqs</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Terms & Condition</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Privacy Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <h4 class="footer__column-title">Proxy</h4>
+                            <ul class="footer__column-list">
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">About</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Shop</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Product</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Track Order</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__column">
+                            <h4 class="footer__column-title">Categories</h4>
+                            <ul class="footer__column-list">
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Fruit & Vegetables</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Meat & Fish</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Bread & Bakery</a>
+                                </li>
+                                <li class="footer__column-item">
+                                    <a href="#" class="footer__column-link">Beauty & Health</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer__bottom">
+                    <p class="footer__bottom-copyright">© 2025 Ecobazar. All rights reserved.</p>
+                    <div class="footer__bottom-payments">
+                        <div class="footer__bottom-payments-image">
+                            <img class="footer__bottom-payments-img" src="./assets/images/svg/ApplePay.svg"
+                                alt="apple pay">
+                        </div>
+                        <div class="footer__bottom-payments-image">
+                            <img class="footer__bottom-payments-img" src="./assets/images/svg/visa-logo.svg" alt="visa">
+                        </div>
+                        <div class="footer__bottom-payments-image">
+                            <img class="footer__bottom-payments-img" src="./assets/images/svg/ApplePay.svg"
+                                alt="apple pay">
+                        </div>
+                        <div class="footer__bottom-payments-image">
+                            <img class="footer__bottom-payments-img" src="./assets/images/svg/ApplePay.svg"
+                                alt="apple pay">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

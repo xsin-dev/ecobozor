@@ -1,0 +1,21 @@
+@use "../base/mixins" as *;
+
+.container {
+    width: 100%;
+    padding: 0px 60px;
+    margin: 0 auto;
+    max-width: 1440px;
+
+    @include lg {
+      padding: 0px 40px;
+    }
+    @include md {
+      padding: 0px 30px;
+    }
+    @include sm {
+      padding: 0px 20px;
+    }
+}
+
+
+

@@ -1,0 +1,65 @@
+@use "../../base/mixins" as *;
+@use "../../base/variables" as *;
+
+.quantity {
+  width: 124px;
+  padding: 8px;
+  border: 1px solid #e6e6e6;
+  border-radius: 170px;
+  @include flexLayout(flex, space-between, center, 8px, row nowrap);
+
+  @include lg {
+    width: 100px;
+    padding: 6px;
+  }
+  @include md {
+    width: 80px;
+    padding: 4px;
+  }
+  @include sm {
+    width: 70px;
+    padding: 2px;
+  }
+
+  &-button {
+    width: 34px;
+    height: 34px;
+    font-family: Poppins;
+    letter-spacing: 0%;
+    text-align: center;
+    @include Button(#f2f2f2, none, 50px, 0);
+    @include headingFonts($text-color, 16px, 400, 150%, none);
+
+    @include lg {
+      font-size: 14px;
+      width: 30px;
+      height: 30px;
+    }
+    @include md {
+      font-size: 12px;
+      width: 26px;
+      height: 26px;
+    }
+    @include sm {
+      font-size: 10px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &-counter {
+    font-family: Poppins;
+    letter-spacing: 0%;
+    text-align: center;
+    @include headingFonts($text-color, 16px, 400, 150%, none);
+
+    @include lg{
+      font-size: 14px;
+    }
+    @include md{
+      font-size: 12px;
+    }
+    @include sm{
+      font-size: 10px;
+    }
+  }
+}

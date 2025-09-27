@@ -1,0 +1,56 @@
+@use "../../base/mixins" as *;
+@use "../../base/variables" as *;
+
+// LOGO
+.logo {
+  @include flexLayout(flex, space-between, center, 8px, row nowrap);
+  &__image {
+    width: 32px;
+    height: 29px;
+
+    @include xl {
+      width: 28px;
+      height: 27px;
+    }
+    @include md {
+      width: 25px;
+      height: 25px;
+    }
+    @include sm {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &__text {
+    font-family: Poppins;
+    letter-spacing: -3%;
+    @include headingFonts($logo-color, 32px, 500, 38px, none);
+
+    @include xl {
+      font-size: 28px;
+    }
+    @include md {
+      font-size: 26px;
+    }
+    @include sm {
+      font-size: 24px;
+    }
+  }
+}
+
+.footer {
+  &__logo {
+    @include flexLayout(flex, space-between, center, 8px, row nowrap);
+    &-image {
+      width: 32px;
+      height: 29px;
+    }
+
+    &-text {
+      font-family: Poppins;
+      letter-spacing: -3%;
+      @include headingFonts(#ffffff, 32px, 500, 38px, none);
+    }
+  }
+}

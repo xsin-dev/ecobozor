@@ -1,0 +1,572 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+.details-header {
+  background: linear-gradient(
+      90.02deg,
+      rgba(0, 0, 0, 0.9) 0.03%,
+      rgba(0, 0, 0, 0) 91.31%
+    ),
+    url(../../assets/images/png/details-header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // height: 120px;
+
+  &__wrapper {
+    height: 120px;
+    @include flexLayout(flex, flex-start, center, 0, row nowrap);
+  }
+}
+
+.breadcrumb {
+  @include flexLayout(flex, flex-start, center, 8px, row nowrap);
+
+  &__item {
+    font-family: Poppins;
+    letter-spacing: 0%;
+    @include headingFonts($navbar-link, 16px, 400, 150%, capitalize);
+
+    &--active {
+      color: $button-color;
+    }
+  }
+  &__separator {
+    font-family: Poppins;
+    letter-spacing: 0%;
+    @include headingFonts($navbar-link, 20px, 600, 150%, capitalize);
+  }
+}
+
+.details {
+  padding: 34px 0;
+  &__main {
+    @include flexLayout(flex, space-between, center, 24px, row nowrap);
+  }
+
+  //   GALLERY
+  &__gallery {
+    width: 50%;
+    @include flexLayout(flex, flex-start, center, 12px, row nowrap);
+
+    &-thumbnails {
+      @include flexLayout(flex, center, center, 56px, column nowrap);
+    }
+
+    &-arrow {
+      width: 20px;
+      height: 20px;
+      background-color: white;
+      border: none;
+
+      &--up {
+        transform: rotate(-90deg);
+      }
+      &--down {
+        transform: rotate(90deg);
+      }
+    }
+
+    &-thumbs {
+      @include flexLayout(flex, center, center, 12px, column nowrap);
+    }
+
+    &-thumb {
+      width: 80px;
+      height: 90px;
+      padding: 4px;
+
+      &--active {
+        border-radius: 2px;
+        border: 1px solid #00b207;
+      }
+
+      &-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-view {
+      flex: 1;
+      height: 500px;
+      @include flexLayout(flex, center, center, 0, row nowrap);
+
+      &-img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain; /* rasm buzilmaydi */
+      }
+    }
+  }
+
+  //   CONTENT
+  &__content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  &__title {
+    font-family: Poppins;
+    letter-spacing: 0%;
+    @include headingFonts($text-color, 36px, 600, 120%, capitalize);
+
+    sup {
+      font-family: Poppins;
+      padding: 4px 8px;
+      border-radius: 4px;
+      letter-spacing: 0%;
+      background: #20b52633;
+      @include headingFonts(#2c742f, 14px, 400, 150%, capitalize);
+    }
+  }
+
+  &__reviews {
+    margin-top: 12px;
+    @include flexLayout(flex, flex-start, center, 0, row nowrap);
+
+    &-image {
+      width: 100px;
+    }
+    &-text {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      margin-left: 4px;
+      @include headingFonts(#666666, 14px, 400, 150%, capitalize);
+
+      span {
+        margin-right: 4px;
+      }
+    }
+    &-dot {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      margin: 0 12px;
+      @include headingFonts(#666666, 20px, 500, 150%, none);
+    }
+
+    &-sku {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts(#333333, 14px, 500, 150%, uppercase);
+
+      span {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts(#666666, 14px, 400, 150%, uppercase);
+      }
+    }
+  }
+
+  &__price {
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e5e5;
+
+    @include flexLayout(flex, flex-start, center, 4px, row nowrap);
+
+    &-old {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts(#b3b3b3, 20px, 400, 150%, line-through);
+    }
+    &-new {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts(#2c742f, 24px, 500, 150%, line-through);
+    }
+    &-discount {
+      font-family: Poppins;
+      padding: 3px 10px;
+      letter-spacing: 0%;
+      border-radius: 30px;
+      margin-left: 8px;
+      background-color: #ea4b481a;
+      @include headingFonts(#ea4b48, 14px, 500, 150%, none);
+    }
+  }
+  // Brand Bar
+  &__brand-bar {
+    margin-top: 24px;
+    @include flexLayout(flex, space-between, center, 0, row nowrap);
+  }
+  &__brand {
+    @include flexLayout(flex, flex-start, center, 8px, row nowrap);
+
+    &-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 4px;
+      border: 0.8px solid #e6e6e6;
+      @include flexLayout(flex, center, center, 0, column nowrap);
+    }
+    &-image {
+      width: 40px;
+      height: 13px;
+    }
+  }
+
+  &__medias {
+    @include flexLayout(flex, flex-end, center, 10px, row nowrap);
+
+    &-text {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts($text-color, 14px, 400, 150%, none);
+    }
+  }
+
+  &__description {
+    font-family: Poppins;
+    padding: 16px 0 24px 0;
+    letter-spacing: 0%;
+    @include headingFonts(#808080, 14px, 400, 150%, none);
+  }
+
+  &__actions {
+    padding: 16px 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    @include flexLayout(flex, flex-start, center, 8px, row nowrap);
+
+    &-quantity {
+      width: 124px;
+      padding: 8px;
+      border: 1px solid #e6e6e6;
+      border-radius: 170px;
+      @include flexLayout(flex, space-between, center, 8px, row nowrap);
+
+      &-button {
+        width: 34px;
+        height: 34px;
+        font-family: Poppins;
+        letter-spacing: 0%;
+        text-align: center;
+        @include Button(#f2f2f2, none, 50px, 0);
+        @include headingFonts($text-color, 16px, 400, 150%, none);
+
+        p {
+        }
+      }
+      &-counter {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        text-align: center;
+        @include headingFonts($text-color, 16px, 400, 150%, none);
+      }
+    }
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+
+    &-category {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts($text-color, 14px, 500, 150%, capitalize);
+
+      span {
+        font-weight: 400;
+        color: #808080;
+      }
+    }
+
+    &-tags {
+      @include flexLayout(flex, flex-start, center, 6px, row nowrap);
+
+      &-text {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts($text-color, 14px, 500, 150%, capitalize);
+      }
+
+      &-list {
+        @include flexLayout(flex, flex-start, center, 6px, row nowrap);
+      }
+      &-item {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        cursor: pointer;
+        transition: all 150ms linear;
+        @include headingFonts(#808080, 14px, 400, 150%, capitalize);
+
+        &:hover {
+          text-decoration: underline;
+          color: $text-color;
+        }
+      }
+    }
+  }
+
+  // INFO
+  &__info {
+    width: 100%;
+    &-tabs {
+      box-shadow: 0px 1px 0px 0px #e5e5e5;
+      @include flexLayout(flex, center, center, 0, row nowrap);
+    }
+    &-tab {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      padding: 16px;
+      cursor: pointer;
+      @include headingFonts($text-color, 16px, 500, 150%, capitalize);
+
+      &--active {
+        box-shadow: 0px -2px 0px 0px #20b526 inset;
+      }
+    }
+
+    &-wrapper {
+      display: none;
+      padding-top: 32px;
+
+      &--active {
+        display: block;
+      }
+    }
+    &-content {
+      @include flexLayout(flex, space-between, flex-start, 0, row nowrap);
+    }
+
+    // Description ***
+    &-description {
+      width: 50%;
+      @include flexLayout(flex, flex-start, flex-start, 20px, column nowrap);
+
+      &-text {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts(#808080, 14px, 400, 150%, none);
+      }
+
+      &-subtext {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts(#808080, 14px, 400, 150%, none);
+      }
+    }
+
+    // Info Right *
+    &-right {
+      @include flexLayout(flex, center, center, 20px, column nowrap);
+    }
+  }
+
+  &__composition {
+    &-list {
+      @include flexLayout(flex, flex-start, flex-start, 14px, column nowrap);
+    }
+    &-item {
+      @include flexLayout(flex, flex-start, center, 8px, row nowrap);
+    }
+    &-check {
+      width: 20px;
+      height: 20px;
+    }
+    &-text {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts(#808080, 14px, 400, 140%, none);
+    }
+  }
+
+  &__media {
+    width: 536px;
+    height: 300px;
+    max-height: 300px;
+    border-radius: 6px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   opacity: 1;
+    //   width: 25px;
+    //   height: 25px;
+    //   transition: 0.3s;
+    //   pointer-events: none;
+    //   transform: translate(-50%, -50%);
+    //   background: url(../../assets/images/svg/instagram.svg) no-repeat
+    //     center/contain;
+    // }
+    // &:hover::after {
+    //   opacity: 1;
+    // }
+  }
+
+  &__highlights {
+    width: 100%;
+    padding: 24px 20px;
+    border-radius: 6px;
+    border: 1px solid #e5e5e5;
+    @include flexLayout(flex, flex-start, center, 22px, row nowrap);
+
+    &-box {
+      @include flexLayout(flex, flex-start, center, 12px, row nowrap);
+    }
+    &-image {
+      width: 32px;
+      height: 32px;
+    }
+
+    &-texts {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    &-title {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts($text-color, 14px, 500, 150%, capitalize);
+    }
+    &-text {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts(#808080, 13px, 400, 150%, none);
+    }
+  }
+
+  // Features ***
+  &__features {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 5px 15px;
+    // @include flexLayout(flex, flex-start, flex-start, 12px, column nowrap);
+  }
+
+  &__feature {
+    display: contents;
+    font-family: Poppins;
+    letter-spacing: 0%;
+
+    @include headingFonts($text-color, 14px, 400, 150%, capitalize);
+
+    &-info {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts(#666666, 14px, 400, 150%, capitalize);
+    }
+  }
+
+  // Feedback ***
+  &__feedback {
+    max-width: 760px;
+
+    &-list {
+      @include flexLayout(flex, flex-start, flex-start, 20px, column nowrap);
+    }
+
+    &-item {
+      padding: 20px 0;
+      width: 100%;
+      border-top: 1px solid #e5e5e5;
+      @include flexLayout(flex, flex-start, flex-start, 12px, column nowrap);
+
+      &:first-child {
+        border-top: none;
+      }
+    }
+    &-top {
+      width: 100%;
+      @include flexLayout(flex, space-between, center, 0, row nowrap);
+    }
+
+    &-user {
+      @include flexLayout(flex, flex-start, center, 12px, row nowrap);
+
+      &-image {
+        width: 41px;
+        height: 41px;
+        object-fit: cover;
+        border-radius: 50px;
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      &-name {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts($text-color, 14px, 500, 150%, capitalize);
+      }
+      &-rating {
+        width: 80px;
+        height: 16px;
+      }
+    }
+
+    &-date {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      text-align: right;
+      @include headingFonts($navbar-link, 14px, 400, 150%, none);
+    }
+
+    &-text {
+      @include headingFonts($navbar-link, 14px, 400, 150%, none);
+    }
+
+    // Button
+    &-btn {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      margin-top: 4px;
+      transition: all 150ms linear;
+      @include headingFonts($button-color, 14px, 600, 120%, capitalize);
+      @include Button(#56ac591a, none, 43px, 14px 32px);
+
+      &:hover {
+        background-color: $button-color;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+// DETAILS PRODUCTS
+.details-products {
+  &__wrapper {
+    padding: 80px 0;
+  }
+  &__title {
+    font-family: Poppins;
+    letter-spacing: 0%;
+    text-align: center;
+    @include headingFonts($text-color, 32px, 600, 120%, capitalize);
+  }
+
+  &__cards {
+    margin-top: 32px;
+    @include gridLayout(grid, 4, 24px);
+  }
+
+  &__card {
+    border-radius: 8px;
+
+    &-image {
+      min-height: 302px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+    &-img {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      // object-fit: cover;
+    }
+  }
+}

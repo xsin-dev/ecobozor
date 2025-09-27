@@ -1,0 +1,1619 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+
+// SECTION HEADER
+.section__header {
+  width: 100%;
+  @include flexLayout(flex, space-between, center, 0, row nowrap);
+
+  &-title {
+    font-family: Poppins;
+    letter-spacing: 0%;
+    @include headingFonts($text-color, 32px, 600, 120%, capitalize);
+
+    @include xl {
+      font-size: 30px;
+    }
+    @include lg {
+      font-size: 28px;
+    }
+    @include md {
+      font-size: 24px;
+    }
+    @include sm {
+      font-size: 20px;
+    }
+  }
+
+  &-button {
+    @include flexLayout(flex, space-between, center, 12px, row nowrap);
+
+    &-text {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts($button-color, 16px, 500, 150%, capitalize);
+
+      @include lg {
+        font-size: 14px;
+      }
+      @include md {
+        font-size: 12px;
+      }
+    }
+
+    &-image {
+      width: 15px;
+      height: 12px;
+
+      @include lg {
+        width: 13px;
+        height: 11px;
+      }
+      @include md {
+        width: 11px;
+        height: 10px;
+      }
+    }
+  }
+}
+
+// **** HERO SECTION ****
+.hero {
+  &__wrapper {
+    display: grid;
+    gap: 24px;
+    height: 600px;
+    padding: 24px 0;
+    grid-template-columns: 2fr 1fr;
+
+    @include xl {
+      gap: 18px;
+      height: 500px;
+    }
+    @include lg {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__content {
+    background: linear-gradient(
+        98.82deg,
+        rgba(0, 0, 0, 0.6) 10.4%,
+        rgba(0, 0, 0, 0) 59.43%
+      ),
+      url(../../assets/images/png/hero-image.jpg);
+    background-position: left;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding-left: 60px;
+    @include flexLayout(flex, center, flex-start, 28px, column nowrap);
+
+    @include md {
+      padding-left: 40px;
+      // height: 400px;
+    }
+
+    &-title {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      width: 500px;
+      @include headingFonts(#ffffff, 48px, 600, 120%, capitalize);
+
+      @include xl {
+        font-size: 44px;
+      }
+      @include lg {
+        font-size: 40px;
+        width: 350px;
+      }
+      @include md {
+        font-size: 36px;
+      }
+      @include sm {
+        font-size: 30px;
+      }
+    }
+
+    &-subtitle {
+      border-left: 2px solid #84d187;
+      padding-left: 12px;
+    }
+    &-info {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts(#ffffff, 20px, 500, 150%, none);
+
+      @include xl {
+        font-size: 18px;
+      }
+      @include lg {
+        font-size: 16px;
+      }
+      @include md {
+        font-size: 14px;
+      }
+      @include sm {
+        font-size: 12px;
+      }
+
+      span {
+        background-color: #ff8a00;
+        padding: 4px 12px;
+        border-radius: 5px;
+      }
+    }
+    &-text {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      margin-top: 8px;
+      @include headingFonts(#ffffff, 14px, 400, 150%, none);
+
+      @include xl {
+        font-size: 13px;
+      }
+      @include lg {
+        font-size: 12px;
+      }
+      @include md {
+        font-size: 10px;
+      }
+      @include sm {
+        font-size: 9px;
+      }
+    }
+  }
+
+  &__side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 24px;
+
+    @include xl {
+      gap: 18px;
+    }
+    @include lg {
+      display: none;
+    }
+
+    &-banner {
+      padding: 32px;
+      border-radius: 10px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(../../assets/images/png/banner.png);
+      @include flexLayout(flex, flex-start, flex-start, 0, column nowrap);
+
+      @include xl {
+        padding: 26px;
+      }
+
+      &-title {
+        font-family: Poppins;
+        letter-spacing: 3%;
+        @include headingFonts(#1a1a1a, 14px, 500, 100%, uppercase);
+
+        @include xl {
+          font-size: 12px;
+        }
+      }
+      &-subtitle {
+        font-family: Poppins;
+        margin-top: 8px;
+        letter-spacing: 0%;
+        @include headingFonts(#1a1a1a, 32px, 600, 120%, uppercase);
+
+        @include xl {
+          font-size: 28px;
+        }
+      }
+      &-text {
+        font-family: Poppins;
+        margin-top: 12px;
+        letter-spacing: 0%;
+        margin-bottom: 24px;
+        @include headingFonts($gray-color, 14px, 400, 150%, capitalize);
+
+        @include xl {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &-info {
+      // width: 423px;
+      // height: 288px;
+      padding: 26px;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: linear-gradient(#002603cc, #002603cc),
+        url(../../assets/images/png/second-banner.jpg);
+
+      @include flexLayout(flex, center, center, 0, column nowrap);
+
+      &-text {
+        font-family: Poppins;
+        text-align: center;
+        @include headingFonts(#ffffff, 14px, 500, 100%, uppercase);
+
+        @include xl {
+          font-size: 12px;
+        }
+      }
+
+      &-title {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        text-align: center;
+        margin-top: 12px;
+        margin-bottom: 32px;
+        width: 343px;
+        @include headingFonts(#ffffff, 32px, 600, 120%, none);
+
+        @include xl {
+          font-size: 24px;
+          width: 230px;
+        }
+      }
+    }
+  }
+
+  //   HERO BOTTOM
+  &__bottom {
+    padding: 44px 40px;
+    box-shadow: 0px 8px 40px 0px #00260314;
+    @include flexLayout(flex, space-between, center, 6px, row nowrap);
+
+    @include defaultMediaQuery(900px) {
+      display: none;
+    }
+
+    &-box {
+      @include flexLayout(flex, space-between, center, 16px, row nowrap);
+
+      &-image {
+        width: 40px;
+        height: 40px;
+
+        @include lg {
+          width: 35px;
+          height: 35px;
+        }
+      }
+
+      &-content {
+        @include flexLayout(flex, flex-start, flex-start, 8px, column nowrap);
+
+        &-title {
+          font-family: Poppins;
+          letter-spacing: 0%;
+          @include headingFonts(#1a1a1a, 16px, 600, 120%, capitalize);
+
+          @include xl {
+            font-size: 15px;
+          }
+          @include lg {
+            font-size: 13px;
+          }
+        }
+        &-text {
+          font-family: Poppins;
+          letter-spacing: 0%;
+          @include headingFonts($navbar-link, 14px, 400, 150%, none);
+
+          @include xl {
+            font-size: 13px;
+          }
+          @include lg {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// **** CATEGORIES SECTION ****
+.categories {
+  &__wrapper {
+    padding-top: 60px;
+    @include flexLayout(flex, flex-start, space-between, 32px, column nowrap);
+  }
+
+  &__cards {
+    @include gridLayout(grid, 6, 24px);
+
+    @include xl {
+      @include gridLayout(grid, 5, 18px);
+    }
+    @include lg {
+      @include gridLayout(grid, 4, 16px);
+    }
+    @include md {
+      @include gridLayout(grid, 3, 14px);
+    }
+    @include sm {
+      @include gridLayout(grid, 2, 10px);
+    }
+    @include defaultMediaQuery(500px) {
+      @include gridLayout(grid, 1, 14px);
+    }
+  }
+  &__card {
+    width: 100%;
+    // max-height: 213px;
+    border-radius: 5px;
+    padding: 16px 0 24px 0;
+    border: 1px solid $card-border;
+    transition: all 150ms linear;
+    @include flexLayout(flex, center, center, 16px, column nowrap);
+
+    &:hover {
+      border: 1px solid #2c742f;
+      box-shadow: 0px 0px 12px 0px #20b52652;
+    }
+    &:hover .categories__card-text {
+      color: #2c742f;
+    }
+
+    &-image {
+      width: 100%;
+      max-width: 190px;
+      max-height: 130px;
+      object-fit: cover;
+    }
+    &-text {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      text-align: center;
+      @include headingFonts($text-color, 18px, 500, 150%, capitalize);
+
+      @include xl {
+        padding: 10px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+// **** PRODUCTS SECTION ****
+.products {
+  &__wrapper {
+    padding: 60px 0;
+    @include flexLayout(flex, flex-start, flex-start, 32px, column nowrap);
+  }
+
+  &__cards {
+    @include gridLayout(grid, 5, 0px);
+
+    @include xl {
+      @include gridLayout(grid, 4, 0px);
+    }
+    @include lg {
+      @include gridLayout(grid, 3, 0px);
+    }
+    @include md {
+      @include gridLayout(grid, 2, 0px);
+    }
+    @include sm {
+      @include gridLayout(grid, 1, 0px);
+    }
+  }
+}
+
+// **** PROMOTIONS ****
+.promotions {
+  padding-bottom: 60px;
+  &__boxes {
+    // @include flexLayout(flex, space-between, center, 24px, row nowrap);
+    @include gridLayout(grid, 3, 24px);
+
+    @include xl {
+    }
+    @include lg {
+      @include gridLayout(grid, 2, 24px);
+    }
+  }
+
+  &__first {
+    background-image: url(../../assets/images/png/promotions-first-img.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+  }
+  &__second {
+    background-image: url(../../assets/images/png/promotions-second-img.png);
+  }
+  &__third {
+    background-image: url(../../assets/images/png/promotions-third-img.png);
+  }
+
+  &__box {
+    height: 536px;
+    // width: 424px;
+    border-radius: 8px;
+    padding: 35px 20px;
+    @include flexLayout(flex, flex-start, center, 16px, column nowrap);
+
+    @include xl {
+      height: 500px;
+    }
+    &-top-title {
+      font-family: Poppins;
+      @include headingFonts(#ffffff, 14px, 500, 100%, uppercase);
+
+      @include lg {
+        font-size: 12px;
+      }
+      @include md {
+        font-size: 11px;
+      }
+      @include sm {
+        font-size: 10px;
+      }
+    }
+
+    &-title {
+      font-family: Poppins;
+      text-align: center;
+      @include headingFonts(#ffffff, 40px, 600, 120%, none);
+
+      @include xl {
+        font-size: 36px;
+      }
+      @include lg {
+        font-size: 30px;
+      }
+      @include md {
+        font-size: 26px;
+      }
+    }
+
+    &-countdown {
+      margin-bottom: 10px;
+      @include flexLayout(flex, space-between, flex-start, 8px, row nowrap);
+
+      &-content {
+        text-align: center;
+      }
+
+      &-time {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts(#ffffff, 24px, 400, 150%, none);
+
+        @include xl {
+          font-size: 22px;
+        }
+        @include lg {
+          font-size: 20px;
+        }
+        @include md {
+          font-size: 18px;
+        }
+      }
+      &-text {
+        font-family: Poppins;
+        opacity: 80%;
+        letter-spacing: 3%;
+        @include headingFonts(#ffffff, 12px, 400, 100%, uppercase);
+
+        @include md {
+          font-size: 11px;
+        }
+        @include sm {
+          font-size: 10px;
+        }
+      }
+
+      &-dot {
+        font-family: Poppins;
+        opacity: 60%;
+        letter-spacing: 0%;
+        text-align: start;
+        @include headingFonts(#ffffff, 24px, 400, 150%, none);
+      }
+    }
+
+    &-second-badge {
+      margin-bottom: 10px;
+      &-text {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts(#ffffff, 18px, 400, 150%, none);
+
+        @include lg {
+          font-size: 16px;
+        }
+        @include md {
+          font-size: 14px;
+        }
+        @include sm {
+          font-size: 12px;
+        }
+      }
+
+      &-price {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts(#ff8a00, 20px, 600, 150%, none);
+
+        @include lg {
+          font-size: 18px;
+        }
+        @include md {
+          font-size: 15px;
+        }
+        @include sm {
+          font-size: 12px;
+        }
+      }
+    }
+
+    &-third-badge {
+      margin-bottom: 10px;
+      &-text {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts($text-color, 18px, 400, 150%, none);
+
+        @include lg {
+          font-size: 16px;
+        }
+        @include md {
+          font-size: 14px;
+        }
+        @include sm {
+          font-size: 12px;
+        }
+      }
+
+      &-percentage {
+        font-family: Poppins;
+        padding: 6px 12px;
+        letter-spacing: 0%;
+        border-radius: 5px;
+        background-color: $text-color;
+        @include headingFonts(#fcc900, 18px, 600, 150%, none);
+
+        @include lg {
+          font-size: 16px;
+        }
+        @include md {
+          font-size: 14px;
+        }
+        @include sm {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+// **** DEALS ****
+.deals {
+  padding: 60px 0;
+  background-color: #f7f7f7;
+  &__cards {
+    display: grid;
+    padding-top: 32px;
+    grid-template-columns: repeat(5, 1fr);
+    // grid-template-columns: 2fr 1fr 1fr 1fr; // katta card + kichik cardlar
+    // gap: 24px;
+
+    @include xl {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__card {
+    grid-row: span 2; // katta card balandroq turadi
+    grid-column: span 2; // katta card balandroq turadi
+    padding: 24px;
+    text-align: left;
+    position: relative;
+    background-color: #ffffff;
+    transition: all 150ms linear;
+    border: 1px solid $card-border;
+
+    @include sm {
+      grid-column: span 1;
+    }
+
+    &:hover {
+      border: 1px solid #2c742f;
+      box-shadow: 0px 0px 12px 0px #20b52652;
+    }
+    &-image {
+      width: 100%;
+      height: auto;
+    }
+    &-img {
+      width: 100%;
+      height: auto;
+    }
+
+    // buttons
+    &-buttons {
+      @include flexLayout(flex, space-between, center, 8px, row nowrap);
+    }
+
+    &-content {
+      margin-top: 24px;
+      @include flexLayout(flex, center, center, 8px, column nowrap);
+
+      @include lg {
+        margin-top: 22px;
+      }
+      @include md {
+        margin-top: 20px;
+      }
+      @include sm {
+        margin-top: 18px;
+      }
+    }
+    &-title {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts(#2c742f, 18px, 400, 150%, none);
+
+      @include md {
+        font-size: 16px;
+      }
+      @include sm {
+        font-size: 14px;
+      }
+    }
+    &-price-box {
+      @include flexLayout(flex, flex-start, center, 2px, row nowrap);
+    }
+    &-price {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts($text-color, 16px, 500, 150%, none);
+    }
+    &-old-price {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      text-decoration: line-through;
+      @include headingFonts($navbar-link, 16px, 400, 150%, none);
+    }
+
+    &-rating {
+      @include flexLayout(flex, center, center, 4px, row nowrap);
+      &-star {
+        width: 60px;
+        height: 12px;
+      }
+
+      &-feedback {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts(#808080, 12px, 400, 130%, none);
+      }
+    }
+
+    // COUNTDOWN ==
+    &-countdown {
+      margin-top: 18px;
+      @include flexLayout(flex, center, center, 6px, column nowrap);
+
+      &-title {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts($navbar-link, 14px, 400, 18px, none);
+      }
+
+      &-wrapper {
+        @include flexLayout(flex, space-between, flex-start, 19px, row nowrap);
+      }
+
+      &-content {
+        text-align: center;
+      }
+
+      &-time {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts($text-color, 24px, 400, 150%, none);
+      }
+      &-text {
+        font-family: Poppins;
+        opacity: 80%;
+        letter-spacing: 3%;
+        @include headingFonts($navbar-link, 12px, 400, 100%, uppercase);
+      }
+
+      &-dot {
+        font-family: Poppins;
+        opacity: 60%;
+        letter-spacing: 0%;
+        text-align: start;
+        @include headingFonts($navbar-link, 24px, 400, 150%, none);
+      }
+    }
+
+    // Badges
+    &-badges {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      @include flexLayout(flex, flex-start, center, 8px, row nowrap);
+    }
+    &-badge {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      padding: 3px 8px;
+      border-radius: 4px;
+      @include headingFonts(#ffffff, 14px, 400, 150%, capitalize);
+
+      &--red {
+        background-color: #ea4b48;
+      }
+      &--blue {
+        background-color: #2388ff;
+      }
+    }
+  }
+}
+
+// **** BANNER ****
+.banner {
+  padding: 60px 0;
+
+  &__wrapper {
+    background: url(../../assets/images/png/banner.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 358px;
+    @include flexLayout(flex, flex-end, center, 0, row nowrap);
+
+    @include lg {
+      justify-content: center;
+    }
+
+    @include lg {
+      background: linear-gradient(
+          98.82deg,
+          rgba(0, 0, 0, 0.6) 50.4%,
+          rgba(0, 0, 0, 0) 59.43%
+        ),
+        url(../../assets/images/png/banner.jpg);
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__content {
+    @include flexLayout(flex, flex-start, flex-start, 12px, column nowrap);
+
+    @include lg {
+      justify-content: center;
+      align-items: center;
+    }
+
+    &-title {
+      font-family: Poppins;
+      letter-spacing: 2%;
+      @include headingFonts(#ffffff, 16px, 500, 100%, uppercase);
+    }
+
+    &-text {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts(#ffffff, 56px, 400, 120%, uppercase);
+
+      @include xl {
+        font-size: 50px;
+      }
+      @include lg {
+        font-size: 46px;
+      }
+      @include md {
+        font-size: 40px;
+      }
+      @include sm {
+        font-size: 35px;
+      }
+
+      span {
+        color: #fcc900;
+        font-weight: 600;
+      }
+    }
+
+    &-info {
+      font-family: Poppins;
+      width: 440px;
+      opacity: 70%;
+      letter-spacing: 0%;
+      @include headingFonts(#ffffff, 16px, 400, 150%, none);
+
+      @include lg {
+        font-size: 14px;
+        text-align: center;
+      }
+      @include md {
+        font-size: 12px;
+        padding: 0 20px;
+      }
+    }
+  }
+}
+
+// FEATURED PRODUCTS
+.featured-products {
+  &__wrapper {
+    padding-bottom: 60px;
+    @include flexLayout(flex, flex-start, flex-start, 32px, column nowrap);
+  }
+
+  &__cards {
+    @include gridLayout(grid, 4, 0px);
+
+    @include lg {
+      @include gridLayout(grid, 3, 0px);
+    }
+    @include md {
+      @include gridLayout(grid, 2, 0px);
+    }
+    @include sm {
+      @include gridLayout(grid, 1, 0px);
+    }
+  }
+}
+
+// **** NEWS ****
+.news {
+  &__wrapper {
+    padding-bottom: 60px;
+    @include flexLayout(flex, flex-start, center, 32px, column nowrap);
+  }
+
+  &__title {
+    font-family: Poppins;
+    letter-spacing: 0%;
+    text-align: center;
+    @include headingFonts($text-color, 32px, 600, 120%, capitalize);
+
+    @include xl {
+      font-size: 30px;
+    }
+    @include lg {
+      font-size: 28px;
+    }
+    @include md {
+      font-size: 24px;
+    }
+  }
+
+  &__boxes {
+    grid-auto-rows: 1fr;
+    @include gridLayout(grid, 3, 24px);
+
+    @include lg {
+      @include gridLayout(grid, 2, 24px);
+    }
+    @include md {
+      @include gridLayout(grid, 1, 24px);
+    }
+  }
+
+  &__box {
+    display: flex;
+    height: 100%;
+    border-radius: 8px;
+    flex-direction: column;
+    border: 1px solid #c4c4c4;
+    transition: all 150ms linear;
+
+    &:hover {
+      box-shadow: 0px 20px 50px 0px #00000014;
+      border: 1px solid #ffffff;
+    }
+    &-image {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      position: relative;
+    }
+    &-img {
+      width: 100%;
+      height: 324px;
+      max-height: 324px;
+      object-fit: cover;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+
+      @include lg {
+        height: 300px;
+      }
+      @include md {
+        height: 270px;
+      }
+      @include sm {
+        height: 250px;
+      }
+    }
+    &-date {
+      position: absolute;
+      left: 24px;
+      width: 58px;
+      height: 58px;
+      bottom: 24px;
+      border-radius: 4px;
+      background-color: #ffffff;
+      @include flexLayout(flex, center, center, 0, column nowrap);
+
+      &-day {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        text-align: center;
+        @include headingFonts($text-color, 20px, 500, 150%, none);
+
+        @include lg {
+          font-size: 18px;
+        }
+        @include md {
+          font-size: 16px;
+        }
+        @include sm {
+          font-size: 14px;
+        }
+      }
+      &-month {
+        font-family: Poppins;
+        letter-spacing: 3%;
+        text-align: center;
+        @include headingFonts(#808080, 12px, 500, 100%, uppercase);
+
+        @include lg {
+          font-size: 11px;
+        }
+        @include md {
+          font-size: 10px;
+        }
+        @include sm {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &-info {
+      flex: 1;
+      padding: 24px;
+      @include flexLayout(flex, flex-start, flex-start, 8px, column nowrap);
+    }
+
+    &-meta {
+      @include flexLayout(flex, flex-start, center, 16px, row nowrap);
+
+      @include xl {
+        gap: 14px;
+      }
+
+      &-item {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts(#4d4d4d, 14px, 400, 150%, capitalize);
+        @include flexLayout(flex, flex-start, center, 4px, row nowrap);
+
+        @include xl {
+          font-size: 12px;
+        }
+
+        @include md {
+          font-size: 12px;
+        }
+        @include sm {
+          font-size: 10px;
+        }
+      }
+      &-img {
+        width: 20px;
+        height: 20px;
+
+        @include xl {
+          width: 18px;
+          height: 18px;
+        }
+        @include md {
+          width: 16px;
+          height: 16px;
+        }
+        @include xl {
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+
+    &-text {
+      flex: 1;
+      font-family: Poppins;
+      letter-spacing: 0%;
+      transition: color 150ms ease;
+      @include lineClamp(2);
+      @include headingFonts($text-color, 18px, 500, 150%, none);
+
+      @include xl {
+        font-size: 16px;
+      }
+      @include md {
+        font-size: 14px;
+      }
+      @include defaultMediaQuery(500px) {
+        font-size: 12px;
+      }
+
+      &-link {
+        &:hover {
+          .news__box-text {
+            color: #2c742f;
+          }
+        }
+      }
+    }
+
+    &-button {
+      font-family: Poppins;
+      margin-top: auto;
+      letter-spacing: 0%;
+      @include Button(#ffffff, 1px solid #ffffff, none, 0);
+      @include headingFonts($button-color, 16px, 600, 120%, capitalize);
+
+      @include xl {
+        font-size: 14px;
+      }
+      @include md {
+        font-size: 12px;
+      }
+      @include sm {
+        font-size: 10px;
+      }
+
+      &-img {
+        width: 15px;
+        height: 12px;
+        margin-left: 12px;
+
+        @include xl {
+          width: 13px;
+          height: 11px;
+          margin-left: 10px;
+        }
+        @include md {
+          width: 11px;
+          height: 10px;
+          margin-left: 8px;
+        }
+        @include md {
+          width: 10px;
+          height: 8px;
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+}
+
+// **** TESTIMONIALS ****
+.testimonials {
+  background-color: #f2f2f2;
+  &__wrapper {
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include md {
+      gap: 25px;
+    }
+    @include sm {
+      gap: 20px;
+    }
+  }
+
+  &__header {
+    @include flexLayout(flex, space-between, center, 0, row nowrap);
+
+    &-title {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts($text-color, 32px, 600, 120%, capitalize);
+
+      @include xl {
+        font-size: 30px;
+      }
+      @include lg {
+        font-size: 28px;
+      }
+      @include md {
+        font-size: 24px;
+      }
+    }
+
+    &-buttons {
+      @include flexLayout(flex, flex-end, center, 12px, row nowrap);
+
+      @include md {
+        gap: 10px;
+      }
+      @include sm {
+        gap: 8px;
+      }
+    }
+    &-button {
+      width: 45px;
+      height: 45px;
+      transition: all 150ms linear;
+      @include Button(#ffffff, 1px solid #e5e5e5, 50px, 0);
+
+      @include lg {
+        width: 40px;
+        height: 40px;
+      }
+      @include md {
+        width: 35px;
+        height: 35px;
+      }
+      @include sm {
+        width: 30px;
+        height: 30px;
+      }
+
+      &:hover {
+        transition: all 150ms linear;
+        background-color: $button-color;
+        i {
+          color: white;
+        }
+      }
+
+      i {
+        width: 15px;
+        height: 12px;
+        transition: all 150ms linear;
+
+        @include md {
+          width: 13px;
+          height: 10px;
+        }
+        @include sm {
+          width: 11px;
+          height: 8px;
+        }
+      }
+    }
+  }
+
+  &__cards {
+    @include gridLayout(grid, 3, 24px);
+
+    @include lg {
+      @include gridLayout(grid, 2, 22px);
+    }
+    @include md {
+      @include gridLayout(grid, 1, 20px);
+    }
+    @include sm {
+      @include gridLayout(grid, 1, 16px);
+    }
+  }
+
+  &__card {
+    width: 100%;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 10px 20px 0px #00000003;
+    @include flexLayout(flex, flex-start, flex-start, 16px, column nowrap);
+
+    &-quotation {
+      width: 32px;
+      height: 26px;
+
+      @include lg {
+        width: 30px;
+        height: 24px;
+      }
+      @include md {
+        width: 28px;
+        height: 22px;
+      }
+      @include sm {
+        width: 26px;
+        height: 20px;
+      }
+    }
+
+    &-text {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts(#4d4d4d, 14px, 400, 150%, none);
+
+      @include lg {
+        font-size: 12px;
+      }
+      @include md {
+        font-size: 10px;
+      }
+      @include sm {
+        font-size: 8px;
+      }
+    }
+
+    &-bottom {
+      width: 100%;
+      @include flexLayout(flex, space-between, center, 0, row nowrap);
+    }
+    &-user {
+      @include flexLayout(flex, flex-start, center, 12px, row nowrap);
+
+      @include lg {
+        gap: 10px;
+      }
+      @include md {
+        gap: 8px;
+      }
+      @include sm {
+        gap: 6px;
+      }
+
+      &-img {
+        width: 56px;
+        height: 56px;
+        border-radius: 50px;
+        object-fit: cover;
+
+        @include lg {
+          width: 52px;
+          height: 52px;
+        }
+        @include md {
+          width: 46px;
+          height: 46px;
+        }
+        @include sm {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      &-info {
+        display: flex;
+        flex-direction: column;
+      }
+      &-name {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts($text-color, 16px, 500, 150%, capitalize);
+
+        @include lg {
+          font-size: 14px;
+        }
+        @include md {
+          font-size: 12px;
+        }
+        @include sm {
+          font-size: 10px;
+        }
+      }
+      &-position {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts($navbar-link, 14px, 400, 150%, capitalize);
+
+        @include lg {
+          font-size: 12px;
+        }
+        @include md {
+          font-size: 10px;
+        }
+        @include sm {
+          font-size: 8px;
+        }
+      }
+    }
+
+    &-rating {
+      &-img {
+        width: 104px;
+        height: 20px;
+
+        @include lg {
+          width: 80px;
+          height: 15px;
+        }
+        @include md {
+          width: 60px;
+          height: 10px;
+        }
+        @include sm {
+          width: 40px;
+          height: 8px;
+        }
+      }
+    }
+  }
+}
+
+// **** PARTNERS ****
+.partners {
+  &__wrapper {
+    padding: 60px 0;
+    @include flexLayout(flex, space-between, center, 0, row nowrap);
+  }
+
+  &__img {
+    height: 32px;
+    max-width: 131px;
+
+    @include xl {
+      height: 28px;
+      width: 115px;
+    }
+    @include lg {
+      height: 26px;
+      width: 100px;
+    }
+    @include md {
+      height: 22px;
+      width: 70px;
+    }
+    @include sm {
+      height: 20px;
+      width: 60px;
+    }
+  }
+  &__line {
+    width: 1px;
+    height: 20px;
+    background-color: #e5e5e5;
+
+    @include lg {
+      height: 18px;
+    }
+    @include md {
+      height: 16px;
+    }
+    @include sm {
+      height: 14px;
+    }
+  }
+}
+
+// **** INSTAGRAM ****
+.instagram {
+  &__wrapper {
+    padding-bottom: 60px;
+    @include flexLayout(flex, flex-start, space-between, 32px, column nowrap);
+  }
+
+  &__title {
+    font-family: Poppins;
+    letter-spacing: 0%;
+    text-align: center;
+    @include headingFonts($text-color, 32px, 600, 120%, none);
+  }
+
+  &__cards {
+    @include gridLayout(grid, 6, 24px);
+
+    @include xl {
+      @include gridLayout(grid, 5, 22px);
+    }
+    @include lg {
+      @include gridLayout(grid, 4, 20px);
+    }
+    @include md {
+      @include gridLayout(grid, 3, 18px);
+    }
+    @include sm {
+      @include gridLayout(grid, 2, 16px);
+    }
+    @include defaultMediaQuery(500px) {
+      @include gridLayout(grid, 1, 14px);
+    }
+  }
+  &__card {
+    position: relative;
+    width: 100%;
+    // width: 200px;
+    height: 200px;
+    border-radius: 10px;
+
+    &-img {
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: 0.3s;
+      border-radius: 10px;
+      pointer-events: none;
+      background: #2b572ecc;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      width: 25px;
+      height: 25px;
+      transition: 0.3s;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      background: url(../../assets/images/svg/instagram.svg) no-repeat
+        center/contain;
+    }
+
+    &:hover::before {
+      opacity: 80%;
+    }
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+}
+
+// **** NEWSLETTER ****
+.newsletter {
+  background-color: #f7f7f7;
+  &__wrapper {
+    padding: 60px 0;
+    @include flexLayout(flex, space-between, center, 0, row nowrap);
+
+    @include lg {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    &-title {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts($text-color, 24px, 600, 150%, none);
+
+      @include xl {
+        font-size: 22px;
+      }
+      @include lg {
+        font-size: 18px;
+        text-align: center;
+      }
+      @include md {
+        font-size: 14px;
+      }
+      @include sm {
+        font-size: 12px;
+      }
+    }
+    &-text {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      width: 448px;
+      @include headingFonts($navbar-link, 14px, 400, 150%, none);
+
+      @include xl {
+        font-size: 12px;
+        width: 350px;
+      }
+      @include lg {
+        font-size: 11px;
+        width: 300px;
+        text-align: center;
+      }
+      @include md {
+        font-size: 10px;
+        width: 220px;
+      }
+      @include sm {
+        font-size: 8px;
+        width: 150px;
+      }
+    }
+  }
+
+  &__form {
+    border-radius: 50px;
+    padding-left: 24px;
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+    @include flexLayout(flex, flex-start, center, 0, row nowrap);
+
+    &-input {
+      font-family: Poppins;
+      width: 300px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      letter-spacing: 0%;
+      border-top-left-radius: 50px;
+      border-bottom-left-radius: 50px;
+      // padding: 14px 24px 14px 14px;
+      @include Input($text-color, #808080, #ffffff, none);
+
+      @include defaultMediaQuery(1250px) {
+        width: 250px;
+        font-size: 14px;
+      }
+      @include xl {
+        width: 200px;
+        font-size: 14px;
+      }
+      @include lg {
+        width: 150px;
+        font-size: 12px;
+      }
+      @include md {
+        width: 120px;
+        font-size: 10px;
+      }
+      @include sm {
+        width: 90px;
+        font-size: 8px;
+      }
+    }
+
+    &-btn {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts(#ffffff, 16px, 600, 20px, capitalize);
+      @include Button($button-color, none, 50px, 16px 40px);
+
+      @include defaultMediaQuery(1250px) {
+        padding: 14px 30px;
+        font-size: 14px;
+      }
+      @include xl {
+        padding: 12px 20px;
+        font-size: 12px;
+      }
+      @include lg {
+        padding: 10px 18px;
+        font-size: 11px;
+      }
+      @include md {
+        padding: 8px 16px;
+        font-size: 10px;
+      }
+      @include sm {
+        padding: 4px 10px;
+        font-size: 8px;
+      }
+
+      &:hover {
+        background-color: #147517;
+      }
+    }
+  }
+}

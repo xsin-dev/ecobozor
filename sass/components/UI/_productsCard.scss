@@ -1,0 +1,247 @@
+@use "../../base/mixins" as *;
+@use "../../base/variables" as *;
+
+.products {
+  &__card {
+    background-color: white;
+    position: relative;
+    // height: 327px;
+    border: 1px solid $card-border;
+    transition: all 150ms linear;
+    @include flexLayout(flex, flex-start, flex-start, 16px, column nowrap);
+
+    &:hover {
+      border: 1px solid #2c742f;
+      box-shadow: 0px 0px 12px 0px #20b52652;
+
+      .products__card-action {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+    }
+
+    &-image {
+      height: 230px;
+    }
+    &-img {
+      height: 100%;
+    }
+
+    &-content {
+      width: 100%;
+      padding: 12px;
+      @include flexLayout(flex, space-between, center, 0, row nowrap);
+    }
+
+    &-title {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts(#4d4d4d, 14px, 400, 150%, capitalize);
+
+      @include xl {
+        font-size: 13px;
+      }
+      @include md {
+        font-size: 12px;
+      }
+      @include sm {
+        font-size: 10px;
+      }
+    }
+
+    &-price-box {
+      @include flexLayout(flex, flex-start, center, 2px, row nowrap);
+    }
+    &-price {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      @include headingFonts($text-color, 16px, 500, 150%, none);
+
+      @include md {
+        font-size: 12px;
+      }
+      @include sm {
+        font-size: 10px;
+      }
+    }
+    &-old-price {
+      font-family: Poppins;
+      letter-spacing: 0%;
+      text-decoration: line-through;
+      @include headingFonts($navbar-link, 16px, 400, 150%, none);
+
+      @include md {
+        font-size: 12px;
+      }
+      @include sm {
+        font-size: 10px;
+      }
+    }
+
+    &-rating {
+      // margin-top: 6px;
+      &-star {
+        width: 60px;
+        height: 12px;
+
+        @include md {
+          width: 50px;
+          height: 10px;
+        }
+        @include sm {
+          width: 40px;
+          height: 8px;
+        }
+      }
+    }
+
+    &-cart {
+      width: 40px;
+      height: 40px;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50px;
+      background-color: #f2f2f2;
+      transition: background-color 150ms linear;
+      @include flexLayout(flex, center, center, 0, row nowrap);
+
+      @include md {
+        width: 35px;
+        height: 35px;
+      }
+      @include sm {
+        width: 30px;
+        height: 30px;
+      }
+
+      &:hover {
+        background-color: $button-color;
+      }
+
+      &-icon {
+        width: 15px;
+        height: 15px;
+
+        @include md {
+          width: 13px;
+          height: 13px;
+        }
+        @include sm {
+          width: 11px;
+          height: 11px;
+        }
+      }
+    }
+
+    &-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background-color: #ea4b48;
+      @include flexLayout(flex, center, center, 4px, row nowrap);
+
+      &-text {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts(#ffffff, 14px, 400, 150%, capitalize);
+      }
+      &-percentage {
+        font-family: Poppins;
+        letter-spacing: 0%;
+        @include headingFonts(#ffffff, 14px, 500, 150%, none);
+      }
+    }
+
+    // ACTION
+    &-action {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 150ms ease;
+    }
+
+    &-like {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      border-radius: 50px;
+      border: 1px solid #f2f2f2;
+      background-color: #ffffff;
+      transition: background-color 150ms ease;
+      @include flexLayout(flex, center, center, 0, row nowrap);
+
+      @include md {
+        width: 35px;
+        height: 35px;
+      }
+      @include md {
+        width: 30px;
+        height: 30px;
+      }
+
+      &:hover {
+        background-color: red;
+      }
+
+      &-icon {
+        width: 20px;
+        height: 20px;
+
+        @include md {
+          width: 18px;
+          height: 18px;
+        }
+        @include sm {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    &-eye {
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      border-radius: 50px;
+      border: 1px solid #f2f2f2;
+      background-color: #ffffff;
+      transition: background-color 150ms ease;
+      @include flexLayout(flex, center, center, 0, row nowrap);
+
+      @include md {
+        width: 35px;
+        height: 35px;
+      }
+      @include sm {
+        width: 30px;
+        height: 30px;
+      }
+
+      &:hover {
+        background-color: $button-color;
+      }
+
+      &-icon {
+        width: 20px;
+        height: 20px;
+        
+        @include md {
+          width: 18px;
+          height: 18px;
+        }
+        @include sm {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
