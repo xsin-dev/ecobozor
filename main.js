@@ -382,14 +382,15 @@ function createProductCard(item) {
     const productsPrice = document.createElement('p');
     const productsPriceOld = document.createElement('p');
     const productsCart = document.createElement('div');
-    const productsCartIcon = document.createElement('i');
+    // const productsCartIcon = document.createElement('i');
     const productsCardAction = document.createElement('div');
     const productsCardEye = document.createElement('div');
-    const productsCardEyeIcon = document.createElement('i');
+    // const productsCardEyeIcon = document.createElement('i');
     const productsCardLike = document.createElement('div');
-    const productsCardLikeIcon = document.createElement('i');
+    // const productsCardLikeIcon = document.createElement('i');
     const productsBadge = document.createElement('div');
     const productsBadgePercentage = document.createElement('p');
+    const productsRating = document.createElement('div')
 
     // class qo'shish
     productsCard.classList.add('products__card');
@@ -407,11 +408,23 @@ function createProductCard(item) {
     productsCardEye.classList.add('products__card-eye');
     productsBadge.classList.add('products__card-badge');
     productsBadgePercentage.classList.add('products__card-badge-percentage');
+    productsRating.classList.add('products__card-rating')
 
     // qiymatlar
     productsName.textContent = item.name;
     productsImg.src = item.image;
     productsPrice.textContent = `$${item.price.toFixed(2)}`;
+
+    for (let i = 0; i < 5; i++) {
+        const star = document.createElement('i')
+
+        if (i < item.rating) {
+            star.classList.add("fa-solid", "fa-star")
+        } else {
+            star.classList.add('fa-regular', 'fa-star')
+        }
+        productsRating.append(star)
+    }
 
     // agar discount bo‘lsa
     if (item.discount) {
@@ -440,7 +453,7 @@ function createProductCard(item) {
 
     // strukturaga yig‘ish
     productsImage.appendChild(productsImg);
-    productsInfo.append(productsName, productsPriceBox);
+    productsInfo.append(productsName, productsPriceBox, productsRating);
     productsContent.append(productsInfo, productsCart);
     productsCardAction.append(productsCardLike, productsCardEye);
     productsCard.append(productsImage, productsContent, productsCardAction);

@@ -81,19 +81,14 @@
     }
 
     &-rating {
-      // margin-top: 6px;
-      &-star {
-        width: 60px;
-        height: 12px;
+      margin-top: 6px;
+      display: flex;
+      align-items: center;
+      gap: 2px;
 
-        @include md {
-          width: 50px;
-          height: 10px;
-        }
-        @include sm {
-          width: 40px;
-          height: 8px;
-        }
+      i {
+        font-size: 10px;
+        color: gold;
       }
     }
 
@@ -191,23 +186,9 @@
         background-color: red;
       }
 
-      i{
+      i {
         font-size: 16px;
       }
-
-      // &-icon {
-      //   width: 20px;
-      //   height: 20px;
-
-      //   @include md {
-      //     width: 18px;
-      //     height: 18px;
-      //   }
-      //   @include sm {
-      //     width: 16px;
-      //     height: 16px;
-      //   }
-      // }
     }
 
     &-eye {
@@ -217,7 +198,7 @@
       border-radius: 50px;
       border: 1px solid #f2f2f2;
       background-color: #ffffff;
-      transition: background-color 150ms ease;  
+      transition: background-color 150ms ease;
       @include flexLayout(flex, center, center, 0, row nowrap);
 
       @include md {
@@ -233,23 +214,9 @@
         background-color: $button-color;
       }
 
-      i{
+      i {
         font-size: 16px;
       }
-
-      // &-icon {
-      //   width: 20px;
-      //   height: 20px;
-
-      //   @include md {
-      //     width: 18px;
-      //     height: 18px;
-      //   }
-      //   @include sm {
-      //     width: 16px;
-      //     height: 16px;
-      //   }
-      // }
     }
   }
 }

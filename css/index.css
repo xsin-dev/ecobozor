@@ -3901,21 +3901,15 @@ body {
     font-size: 10px;
   }
 }
-.products__card-rating-star {
-  width: 60px;
-  height: 12px;
+.products__card-rating {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
-@media only screen and (max-width: 768px) {
-  .products__card-rating-star {
-    width: 50px;
-    height: 10px;
-  }
-}
-@media only screen and (max-width: 576px) {
-  .products__card-rating-star {
-    width: 40px;
-    height: 8px;
-  }
+.products__card-rating i {
+  font-size: 10px;
+  color: gold;
 }
 .products__card-cart {
   width: 40px;
