@@ -865,8 +865,11 @@
   }
 
   &__cards {
-    @include gridLayout(grid, 4, 0px);
+    @include gridLayout(grid, 5, 0px);
 
+    @include xl {
+      @include gridLayout(grid, 4, 0px);
+    }
     @include lg {
       @include gridLayout(grid, 3, 0px);
     }

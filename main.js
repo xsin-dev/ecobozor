@@ -428,10 +428,15 @@ function createProductCard(item) {
         productsPriceBox.append(productsPrice);
     }
 
+
     // ikonlar
     productsCardLike.innerHTML = '<i class="fa-regular fa-heart"></i>';
     productsCardEye.innerHTML = '<i class="fa-regular fa-eye"></i>';
     productsCart.innerHTML = '<i class="fa-solid fa-cart-shopping"></i>';
+
+    productsCardEye.addEventListener('click', () => {
+        window.location.href = "./pages/detailsPage.html"
+    })
 
     // strukturaga yig‘ish
     productsImage.appendChild(productsImg);
@@ -545,7 +550,7 @@ const products = [
     },
 ]
 
-products.forEach((item) => {
+products.slice(0, 10).forEach((item) => {
     const card = createProductCard(item)
 
     productsCards.appendChild(card)
@@ -562,7 +567,7 @@ products.forEach((item) => {
 
 
 const featuredProductsCards = document.querySelector('.featured-products__cards');
-products.slice(0, 4).forEach((item) => {
+products.slice(0, 5).forEach((item) => {
     const card = createProductCard(item);
     featuredProductsCards.appendChild(card);
 });
