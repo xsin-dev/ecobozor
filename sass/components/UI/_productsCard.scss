@@ -26,6 +26,7 @@
     }
     &-img {
       height: 100%;
+      // object-fit: cover;
     }
 
     &-content {
@@ -99,7 +100,6 @@
     &-cart {
       width: 40px;
       height: 40px;
-      padding: 10px;
       cursor: pointer;
       border-radius: 50px;
       background-color: #f2f2f2;
@@ -191,19 +191,23 @@
         background-color: red;
       }
 
-      &-icon {
-        width: 20px;
-        height: 20px;
-
-        @include md {
-          width: 18px;
-          height: 18px;
-        }
-        @include sm {
-          width: 16px;
-          height: 16px;
-        }
+      i{
+        font-size: 16px;
       }
+
+      // &-icon {
+      //   width: 20px;
+      //   height: 20px;
+
+      //   @include md {
+      //     width: 18px;
+      //     height: 18px;
+      //   }
+      //   @include sm {
+      //     width: 16px;
+      //     height: 16px;
+      //   }
+      // }
     }
 
     &-eye {
@@ -213,7 +217,7 @@
       border-radius: 50px;
       border: 1px solid #f2f2f2;
       background-color: #ffffff;
-      transition: background-color 150ms ease;
+      transition: background-color 150ms ease;  
       @include flexLayout(flex, center, center, 0, row nowrap);
 
       @include md {
@@ -229,19 +233,23 @@
         background-color: $button-color;
       }
 
-      &-icon {
-        width: 20px;
-        height: 20px;
-        
-        @include md {
-          width: 18px;
-          height: 18px;
-        }
-        @include sm {
-          width: 16px;
-          height: 16px;
-        }
+      i{
+        font-size: 16px;
       }
+
+      // &-icon {
+      //   width: 20px;
+      //   height: 20px;
+
+      //   @include md {
+      //     width: 18px;
+      //     height: 18px;
+      //   }
+      //   @include sm {
+      //     width: 16px;
+      //     height: 16px;
+      //   }
+      // }
     }
   }
 }

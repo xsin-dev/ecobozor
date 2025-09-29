@@ -1121,6 +1121,11 @@
     flex-direction: column;
     gap: 32px;
 
+    //
+    position: relative;
+
+    overflow: hidden;
+    //
     @include md {
       gap: 25px;
     }
@@ -1203,26 +1208,43 @@
   }
 
   &__cards {
-    @include gridLayout(grid, 3, 24px);
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
 
-    @include lg {
-      @include gridLayout(grid, 2, 22px);
-    }
-    @include md {
-      @include gridLayout(grid, 1, 20px);
-    }
-    @include sm {
-      @include gridLayout(grid, 1, 16px);
-    }
+    gap: 24px;
+    display: flex;
+    align-items: stretch;
+    // @include gridLayout(grid, 3, 24px);
+
+    // @include lg {
+    //   @include gridLayout(grid, 2, 22px);
+    // }
+    // @include md {
+    //   @include gridLayout(grid, 1, 20px);
+    // }
+    // @include sm {
+    //   @include gridLayout(grid, 1, 16px);
+    // }
   }
 
   &__card {
-    width: 100%;
+    width: 33.33%;
     padding: 24px;
     border-radius: 8px;
     background-color: #ffffff;
     box-shadow: 0px 10px 20px 0px #00000003;
-    @include flexLayout(flex, flex-start, flex-start, 16px, column nowrap);
+
+    flex-shrink: 0;
+    flex: 0 0 calc((100% - (24px * 2)) / 3);
+    @include flexLayout(flex, space-between, flex-start, 16px, column nowrap);
+
+    @include lg {
+      flex: 0 0 calc((100% - 24px) / 2); // 2 ta card
+    }
+
+    @include md {
+      flex: 0 0 100%; // 1 ta card
+    }
 
     &-quotation {
       width: 32px;
@@ -1245,6 +1267,9 @@
     &-text {
       font-family: Poppins;
       letter-spacing: 0%;
+
+      // flex: 1;
+      @include lineClamp(3);
       @include headingFonts(#4d4d4d, 14px, 400, 150%, none);
 
       @include lg {
@@ -1332,25 +1357,40 @@
     }
 
     &-rating {
-      &-img {
-        width: 104px;
-        height: 20px;
+      display: flex;
+      align-items: center;
+      gap: 2px;
 
-        @include lg {
-          width: 80px;
-          height: 15px;
-        }
-        @include md {
-          width: 60px;
-          height: 10px;
-        }
-        @include sm {
-          width: 40px;
-          height: 8px;
-        }
+      i {
+        font-size: 10px;
+        color: gold;
       }
     }
   }
+
+  // Dots
+  &__dot{
+  width: 15px;
+  height: 15px;
+  background-color: #c4c4c4;
+  // border: .5px solid black;
+  border-radius: 50px;
+
+  &--active{
+    background-color: $button-color;
+  }
+}
+
+&__dots{
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 }
 
 // **** PARTNERS ****
