@@ -382,12 +382,9 @@ function createProductCard(item) {
     const productsPrice = document.createElement('p');
     const productsPriceOld = document.createElement('p');
     const productsCart = document.createElement('div');
-    // const productsCartIcon = document.createElement('i');
     const productsCardAction = document.createElement('div');
     const productsCardEye = document.createElement('div');
-    // const productsCardEyeIcon = document.createElement('i');
     const productsCardLike = document.createElement('div');
-    // const productsCardLikeIcon = document.createElement('i');
     const productsBadge = document.createElement('div');
     const productsBadgePercentage = document.createElement('p');
     const productsRating = document.createElement('div')
@@ -584,3 +581,319 @@ products.slice(0, 5).forEach((item) => {
     const card = createProductCard(item);
     featuredProductsCards.appendChild(card);
 });
+
+
+
+// ==================================== CATEGORIES CARD ==============================
+const categoriesCards = document.querySelector('.categories__cards')
+
+const categories = [
+    {
+        id: 1,
+        category: 'Fresh fruit',
+        image: './assets/images/png/fruit.png',
+        alt: '',
+    },
+    {
+        id: 2,
+        category: 'Fresh Vegetables',
+        image: './assets/images/png/vagitables.png',
+        alt: '',
+    },
+    {
+        id: 3,
+        category: 'Meat & Fish',
+        image: './assets/images/png/fish.png',
+        alt: '',
+    },
+    {
+        id: 4,
+        category: 'snacks',
+        image: './assets/images/png/snacks.png',
+        alt: '',
+    },
+    {
+        id: 5,
+        category: 'beverages',
+        image: './assets/images/png/beverages.png',
+        alt: '',
+    },
+    {
+        id: 6,
+        category: 'Beauty & Health',
+        image: './assets/images/png/beauty.png',
+        alt: '',
+    },
+    {
+        id: 7,
+        category: 'Bread & Bakery',
+        image: './assets/images/png/bakery.png',
+        alt: '',
+    },
+    {
+        id: 8,
+        category: 'Baking Needs',
+        image: './assets/images/png/bakery-needs.png',
+        alt: '',
+    },
+    {
+        id: 9,
+        category: 'cooking',
+        image: './assets/images/png/cooking.png',
+        alt: '',
+    },
+    {
+        id: 10,
+        category: 'Diabetic Food',
+        image: './assets/images/png/deabetic-food.png',
+        alt: '',
+    },
+    {
+        id: 11,
+        category: 'Dish Detergents',
+        image: './assets/images/png/detergents.png',
+        alt: '',
+    },
+    {
+        id: 12,
+        category: 'oil',
+        image: './assets/images/png/oil.png',
+        alt: '',
+    },
+]
+
+categories.slice(0, 12).map((item) => {
+    const categoriesCard = document.createElement('div');
+    const categoriesImg = document.createElement('img');
+    const categoriesName = document.createElement('p');
+    ;
+    categoriesCard.classList.add('categories__card');
+    categoriesImg.classList.add('categories__card-image');
+    categoriesName.classList.add('categories__card-text');
+
+
+    categoriesImg.src = item.image;
+    categoriesName.textContent = item.category;
+
+    categoriesCard.append(categoriesImg, categoriesName);
+
+    categoriesCards.appendChild(categoriesCard);
+})
+// ===========================================================================================================
+
+// =========================== NEWS CARDS ====================================================================
+const newsBoxes = document.querySelector('.news__boxes')
+
+const news = [
+    {
+        id: 1,
+        comments: 24,
+        author: "admin",
+        category: 'food',
+        date: { day: "12", month: "Feb" },
+        img: './assets/images/png/news-img.jpg',
+        title: 'Curabitur porttitor orci eget neque accumsan abitur porttitor orci eget neque accumsvenenatis. Nunc fermentum.',
+    },
+    {
+        id: 2,
+        comments: 64,
+        author: "admin",
+        category: 'food',
+        date: { day: "12", month: "sep" },
+        img: './assets/images/png/news-img2.jpg',
+        title: 'Salom Dunyo Salom JavaScript,',
+    },
+    {
+        id: 3,
+        comments: 12,
+        author: "admin",
+        category: 'food',
+        date: { day: "12", month: "Feb" },
+        img: './assets/images/png/news-img3.jpg',
+        title: 'Maecenas blandit risus elementum mauris malesuada.',
+    },
+]
+
+news.map((item) => {
+    const newsBox = document.createElement('div')
+    const newsBoxImage = document.createElement('div')
+    const newsImg = document.createElement('img')
+    const newsDate = document.createElement('div')
+    const newsDateDay = document.createElement('p')
+    const newsDateMonth = document.createElement('p')
+    const newsInfo = document.createElement('div')
+    const newsMeta = document.createElement('div')
+    const newsTitle = document.createElement('p')
+    const newsButton = document.createElement('button')
+
+
+    newsBox.classList.add('news__box')
+    newsBoxImage.classList.add('news__box-image')
+    newsImg.classList.add('news__box-img')
+    newsDate.classList.add('news__box-date')
+    newsDateDay.classList.add('news__box-date-day')
+    newsDateMonth.classList.add('news__box-date-month')
+    newsInfo.classList.add('news__box-info')
+    newsMeta.classList.add('news__box-meta')
+    newsTitle.classList.add('news__box-text')
+    newsButton.classList.add('news__box-button')
+
+    newsImg.src = item.img
+    newsDateDay.textContent = item.date.day
+    newsDateMonth.textContent = item.date.month
+    newsTitle.textContent = item.title
+
+    newsButton.innerHTML = `read more <i class="fa-solid fa-arrow-right"></i>`
+
+    newsDate.append(newsDateDay, newsDateMonth);
+    newsBoxImage.append(newsImg, newsDate);
+    newsMeta.append(
+        createMetaItem("./assets/images/svg/category-icon.svg", "category icon", item.category),
+        createMetaItem("./assets/images/svg/user-icon.svg", "user icon", "By " + item.author),
+        createMetaItem("./assets/images/svg/comment-icon.svg", "comment icon", item.comments + " Comment")
+    );
+    newsInfo.append(newsMeta, newsTitle, newsButton);
+    newsBox.append(newsBoxImage, newsInfo);
+
+    newsBoxes.appendChild(newsBox);
+})
+
+function createMetaItem(iconSrc, altText, text) {
+    const span = document.createElement("span");
+    span.className = "news__box-meta-item";
+
+    const img = document.createElement("img");
+    img.className = "news__box-meta-img";
+    img.src = iconSrc;
+    img.alt = altText;
+
+    span.appendChild(img);
+    span.append(text);
+    return span;
+}
+// ===========================================================================================================
+
+
+// ====================== PARTNERS LOGOS =====================================
+const partnersWrapper = document.querySelector(".partners__wrapper");
+
+const logos = [
+    { src: "./assets/images/svg/step.svg", alt: "step icon" },
+    { src: "./assets/images/svg/mango.svg", alt: "mango icon" },
+    { src: "./assets/images/svg/food-network.svg", alt: "food-network icon" },
+    { src: "./assets/images/svg/food.svg", alt: "food icon" },
+    { src: "./assets/images/svg/bookoff-corporation-logo.svg", alt: "bookoff-corporation icon" },
+    { src: "./assets/images/svg/g-series.svg", alt: "g-series icon" },
+];
+
+logos.forEach((logo, index) => {
+    const img = document.createElement("img");
+    img.className = "partners__img";
+    img.src = logo.src;
+    img.alt = logo.alt;
+    partnersWrapper.appendChild(img);
+
+    // agar oxirgi bo‘lmasa, line qo‘shish
+    if (index < logos.length - 1) {
+        const line = document.createElement("span");
+        line.className = "partners__line";
+        partnersWrapper.appendChild(line);
+    }
+});
+// ===============================================================================================
+
+// ================================= INSTAGRAM POSTS ======================================
+const instagramCards = document.querySelector('.instagram__cards')
+
+const instagramPosts = [
+    {
+        id: 1,
+        image: "/assets/images/png/instagram-post.jpg",
+        url: 'https://www.instagram.com/sin_1005_',
+    },
+    {
+        id: 2,
+        image: "/assets/images/png/instagram-post.jpg",
+        url: 'https://www.instagram.com/najottalim',
+    },
+    {
+        id: 3,
+        image: "/assets/images/png/instagram-post.jpg",
+        url: 'https://www.instagram.com/najottalim',
+    },
+    {
+        id: 4,
+        image: "/assets/images/png/instagram-post.jpg",
+        url: 'https://www.instagram.com/najottalim',
+    },
+    {
+        id: 5,
+        image: "/assets/images/png/instagram-post.jpg",
+        url: 'https://www.instagram.com/najottalim',
+    },
+    {
+        id: 6,
+        image: "/assets/images/png/instagram-post.jpg",
+        url: 'https://www.instagram.com/najottalim',
+    },
+]
+
+instagramPosts.map((item) => {
+    const instagramCard = document.createElement('div')
+    const instagramCardImg = document.createElement('img')
+
+    instagramCard.classList.add('instagram__card')
+    instagramCardImg.classList.add('instagram__card-img')
+
+    instagramCardImg.src = item.image
+
+    instagramCard.addEventListener('click', () => {
+        window.location.href = item.url
+    })
+
+    instagramCard.appendChild(instagramCardImg)
+    instagramCards.appendChild(instagramCard)
+})
+// =============================================================================================================
+
+// ======================= MEDIAS ==============================
+const mediasIcon = document.querySelector('.medias')
+
+const medias = [
+    {
+        id: 1,
+        icon: 'fa-facebook-f',
+        url: 'https://facebook.com/tajottalim',
+    },
+    {
+        id: 2,
+        icon: 'fa-twitter',
+        url: 'https://x.com/najottalim',
+    },
+    {
+        id: 3,
+        icon: 'fa-pinterest-p',
+        url: 'https://pinterest.com',
+    },
+    {
+        id: 4,
+        icon: 'fa-instagram',
+        url: 'https://instagram.com/najottalim',
+    },
+]
+
+medias.map((item) => {
+    const media = document.createElement('div')
+    const icon = document.createElement('i')
+
+    media.classList.add('media')
+    icon.classList.add('fa-brands', item.icon)
+
+    media.addEventListener('click', ()=>{
+        window.open(item.url, "_blank")
+    })
+
+    media.appendChild(icon)
+    mediasIcon.appendChild(media)
+})
+// ================================================================================================================
